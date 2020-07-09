@@ -20,6 +20,12 @@
 		8491114424B309A900E118B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491114324B309A900E118B5 /* main.m */; };
 		84CDC23224B59B390092F377 /* CharacterSave.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CDC23124B59B390092F377 /* CharacterSave.m */; };
 		84CDC23524B59F680092F377 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CDC23324B59F680092F377 /* Constant.m */; };
+		84FFCE2324B6B6B90084AB5C /* CommonNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FFCE2124B6B6B90084AB5C /* CommonNavigationController.m */; };
+		84FFCE2624B6B6BE0084AB5C /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FFCE2524B6B6BE0084AB5C /* CommonViewController.m */; };
+		84FFCE2D24B6C4960084AB5C /* BattleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FFCE2B24B6C4960084AB5C /* BattleViewController.m */; };
+		84FFCE2E24B6C4960084AB5C /* BattleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FFCE2C24B6C4960084AB5C /* BattleViewController.xib */; };
+		84FFCE3224B714300084AB5C /* DescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FFCE3124B714300084AB5C /* DescriptionView.m */; };
+		84FFCE3424B7143F0084AB5C /* DescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FFCE3324B7143F0084AB5C /* DescriptionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,16 @@
 		84CDC23124B59B390092F377 /* CharacterSave.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterSave.m; sourceTree = "<group>"; };
 		84CDC23324B59F680092F377 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		84CDC23424B59F680092F377 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		84FFCE2124B6B6B90084AB5C /* CommonNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonNavigationController.m; sourceTree = "<group>"; };
+		84FFCE2224B6B6B90084AB5C /* CommonNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonNavigationController.h; sourceTree = "<group>"; };
+		84FFCE2424B6B6BE0084AB5C /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
+		84FFCE2524B6B6BE0084AB5C /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
+		84FFCE2A24B6C4960084AB5C /* BattleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BattleViewController.h; sourceTree = "<group>"; };
+		84FFCE2B24B6C4960084AB5C /* BattleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BattleViewController.m; sourceTree = "<group>"; };
+		84FFCE2C24B6C4960084AB5C /* BattleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BattleViewController.xib; sourceTree = "<group>"; };
+		84FFCE3024B714300084AB5C /* DescriptionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DescriptionView.h; sourceTree = "<group>"; };
+		84FFCE3124B714300084AB5C /* DescriptionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DescriptionView.m; sourceTree = "<group>"; };
+		84FFCE3324B7143F0084AB5C /* DescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +80,10 @@
 		8404BCC624B4762A00C99FB6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				84FFCE2424B6B6BE0084AB5C /* CommonViewController.h */,
+				84FFCE2524B6B6BE0084AB5C /* CommonViewController.m */,
+				84FFCE2224B6B6B90084AB5C /* CommonNavigationController.h */,
+				84FFCE2124B6B6B90084AB5C /* CommonNavigationController.m */,
 				84CDC23424B59F680092F377 /* Constant.h */,
 				84CDC23324B59F680092F377 /* Constant.m */,
 				8404BCC324B4727200C99FB6 /* UserDefaults.h */,
@@ -94,19 +114,12 @@
 			children = (
 				8491113124B309A700E118B5 /* AppDelegate.h */,
 				8491113224B309A700E118B5 /* AppDelegate.m */,
+				84FFCE2824B6C2480084AB5C /* Model */,
+				84FFCE2F24B713FB0084AB5C /* View */,
+				84FFCE2724B6C23D0084AB5C /* Controller */,
 				8404BCC624B4762A00C99FB6 /* Common */,
-				8491113724B309A700E118B5 /* ViewController.h */,
+				84FFCE2924B6C4580084AB5C /* Tool */,
 				8491113824B309A700E118B5 /* ViewController.m */,
-				84CDC23024B59B390092F377 /* CharacterSave.h */,
-				84CDC23124B59B390092F377 /* CharacterSave.m */,
-				8404BCB724B4184700C99FB6 /* CharacterAttributes.h */,
-				8404BCB824B4184700C99FB6 /* CharacterAttributes.m */,
-				8404BCC024B4620E00C99FB6 /* ItemAttributes.h */,
-				8404BCC124B4620E00C99FB6 /* ItemAttributes.m */,
-				8404BCBA24B4613B00C99FB6 /* AttributeCalculationTool.h */,
-				8404BCBB24B4613B00C99FB6 /* AttributeCalculationTool.m */,
-				8404BCBD24B4617200C99FB6 /* CharacterItems.h */,
-				8404BCBE24B4617200C99FB6 /* CharacterItems.m */,
 				8491113A24B309A700E118B5 /* Main.storyboard */,
 				8491113D24B309A900E118B5 /* Assets.xcassets */,
 				8491113F24B309A900E118B5 /* LaunchScreen.storyboard */,
@@ -114,6 +127,51 @@
 				8491114324B309A900E118B5 /* main.m */,
 			);
 			path = Adventure;
+			sourceTree = "<group>";
+		};
+		84FFCE2724B6C23D0084AB5C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84FFCE2A24B6C4960084AB5C /* BattleViewController.h */,
+				84FFCE2B24B6C4960084AB5C /* BattleViewController.m */,
+				84FFCE2C24B6C4960084AB5C /* BattleViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84FFCE2824B6C2480084AB5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84CDC23024B59B390092F377 /* CharacterSave.h */,
+				84CDC23124B59B390092F377 /* CharacterSave.m */,
+				8404BCB724B4184700C99FB6 /* CharacterAttributes.h */,
+				8404BCB824B4184700C99FB6 /* CharacterAttributes.m */,
+				8404BCC024B4620E00C99FB6 /* ItemAttributes.h */,
+				8404BCC124B4620E00C99FB6 /* ItemAttributes.m */,
+				8404BCBD24B4617200C99FB6 /* CharacterItems.h */,
+				8404BCBE24B4617200C99FB6 /* CharacterItems.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84FFCE2924B6C4580084AB5C /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				8491113724B309A700E118B5 /* ViewController.h */,
+				8404BCBA24B4613B00C99FB6 /* AttributeCalculationTool.h */,
+				8404BCBB24B4613B00C99FB6 /* AttributeCalculationTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		84FFCE2F24B713FB0084AB5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84FFCE3024B714300084AB5C /* DescriptionView.h */,
+				84FFCE3124B714300084AB5C /* DescriptionView.m */,
+				84FFCE3324B7143F0084AB5C /* DescriptionView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FFCE2E24B6C4960084AB5C /* BattleViewController.xib in Resources */,
 				8491114124B309A900E118B5 /* LaunchScreen.storyboard in Resources */,
+				84FFCE3424B7143F0084AB5C /* DescriptionView.xib in Resources */,
 				8491113E24B309A900E118B5 /* Assets.xcassets in Resources */,
 				8491113C24B309A700E118B5 /* Main.storyboard in Resources */,
 			);
@@ -188,10 +248,14 @@
 			files = (
 				84CDC23224B59B390092F377 /* CharacterSave.m in Sources */,
 				8404BCC524B4727200C99FB6 /* UserDefaults.m in Sources */,
+				84FFCE2D24B6C4960084AB5C /* BattleViewController.m in Sources */,
 				8404BCB924B4184700C99FB6 /* CharacterAttributes.m in Sources */,
 				8491113924B309A700E118B5 /* ViewController.m in Sources */,
+				84FFCE2624B6B6BE0084AB5C /* CommonViewController.m in Sources */,
 				8404BCBF24B4617200C99FB6 /* CharacterItems.m in Sources */,
 				84CDC23524B59F680092F377 /* Constant.m in Sources */,
+				84FFCE2324B6B6B90084AB5C /* CommonNavigationController.m in Sources */,
+				84FFCE3224B714300084AB5C /* DescriptionView.m in Sources */,
 				8491113324B309A700E118B5 /* AppDelegate.m in Sources */,
 				8491114424B309A900E118B5 /* main.m in Sources */,
 				8404BCC224B4620E00C99FB6 /* ItemAttributes.m in Sources */,
