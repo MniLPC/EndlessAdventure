@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Attack</string>
+		<key>description</key>
+		<string>Attack an enemy. Based on STR. Power100.</string>
+		<key>power</key>
+		<string>100</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tornado Slash</string>
+		<key>description</key>
+		<string>A powerful attack.Based on STR. power 800</string>
+		<key>power</key>
+		<string>800</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Guard</string>
+		<key>description</key>
+		<string>Reduce damage you dealt in this turn.</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>1</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ranged shot</string>
+		<key>description</key>
+		<string>Attack an enemy.Based on Dex. Power 100</string>
+		<key>power</key>
+		<string>100</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>DEX</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Backstep</string>
+		<key>description</key>
+		<string>Gain avoid in this turn. Avoid stat +65%</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>2</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>0</string>
+		<key>cooldown</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Quick Draw</string>
+		<key>description</key>
+		<string>Reduce 1 cooldown of your any skill.</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>3</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>0</string>
+		<key>cooldown</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fireball</string>
+		<key>description</key>
+		<string>Attack an enemy.Based on INT. Power 150</string>
+		<key>power</key>
+		<string>150</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>INT</string>
+		<key>cooldown</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Forcefield</string>
+		<key>description</key>
+		<string>Create shield.Based on INT</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>4</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>INT</string>
+		<key>cooldown</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Overflow</string>
+		<key>description</key>
+		<string>Gain great power in next turn.</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>5</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>0</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Holybolt</string>
+		<key>description</key>
+		<string>Attack an enemy.Based on PIE. Power 100</string>
+		<key>power</key>
+		<string>100</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>PIE</string>
+		<key>cooldown</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Healing</string>
+		<key>description</key>
+		<string>Heal yourself.based on MaxHP</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>6</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Instant heal</string>
+		<key>description</key>
+		<string>Heal yourself without wasting your turn.</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>6</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>-1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Slash</string>
+		<key>description</key>
+		<string>Attack an enemy.Based on STR. Power 120</string>
+		<key>power</key>
+		<string>120</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Blood Drain</string>
+		<key>description</key>
+		<string>Drain an opponent&apos;s blood and heal yourself.Based on INT. Power 100 </string>
+		<key>power</key>
+		<string>100</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>INT</string>
+		<key>cooldown</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bloody edge</string>
+		<key>description</key>
+		<string>You can pay your HP to gain powerup.
+Not use turn Costs around 17% of your max HP</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>7</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>-1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Shadowshot</string>
+		<key>description</key>
+		<string>Attack an enemy.based on DEX. Power 200</string>
+		<key>power</key>
+		<string>200</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>DEX</string>
+		<key>cooldown</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pharmacy</string>
+		<key>description</key>
+		<string>Gain shield.Based on Opponent&apos;s Damage over Time</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>4</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Deadly Poison</string>
+		<key>description</key>
+		<string>Add poison to your attack.</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>1</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Struggle</string>
+		<key>description</key>
+		<string>Attack an enemy. Based on Level.  Power100</string>
+		<key>power</key>
+		<string>100</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Revenge</string>
+		<key>description</key>
+		<string>Reflect whenever an enemy attacks. Based on MaxHP</string>
+		<key>power</key>
+		<string>30</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sacrifice</string>
+		<key>description</key>
+		<string>You pay your HP to prolong your good effect.</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Charge</string>
+		<key>description</key>
+		<string>Attack an enemy. Based on STR Power200</string>
+		<key>power</key>
+		<string>200</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Refresh</string>
+		<key>description</key>
+		<string>Remove all effect on yourself.</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Hatered</string>
+		<key>description</key>
+		<string>The more you lose your HP, the more poewrful your attack is.</string>
+		<key>power</key>
+		<string>30</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tornado Slash</string>
+		<key>description</key>
+		<string>A powerful attack.Based on STR power 800</string>
+		<key>power</key>
+		<string>800</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tornado Slash</string>
+		<key>description</key>
+		<string>A powerful attack.Based on STR power 800</string>
+		<key>power</key>
+		<string>800</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tornado Slash</string>
+		<key>description</key>
+		<string>A powerful attack.Based on STR power 800</string>
+		<key>power</key>
+		<string>800</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tornado Slash</string>
+		<key>description</key>
+		<string>A powerful attack.Based on STR power 800</string>
+		<key>power</key>
+		<string>800</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tornado Slash</string>
+		<key>description</key>
+		<string>A powerful attack.Based on STR power 800</string>
+		<key>power</key>
+		<string>800</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tornado Slash</string>
+		<key>description</key>
+		<string>A powerful attack.Based on STR power 800</string>
+		<key>power</key>
+		<string>800</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+</array>
+</plist>

@@ -12,6 +12,11 @@
 		8404BCBF24B4617200C99FB6 /* CharacterItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404BCBE24B4617200C99FB6 /* CharacterItems.m */; };
 		8404BCC224B4620E00C99FB6 /* ItemAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404BCC124B4620E00C99FB6 /* ItemAttributes.m */; };
 		8404BCC524B4727200C99FB6 /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404BCC424B4727200C99FB6 /* UserDefaults.m */; };
+		8427564124B8191C00C9782B /* SkillList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427564024B8191C00C9782B /* SkillList.plist */; };
+		8427564324B81CBC00C9782B /* BuffList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427564224B81CBC00C9782B /* BuffList.plist */; };
+		8427564524B81CC600C9782B /* DebuffList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427564424B81CC600C9782B /* DebuffList.plist */; };
+		8427564724B81D5000C9782B /* ItemList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427564624B81D5000C9782B /* ItemList.plist */; };
+		8427564924B871B300C9782B /* EffectList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427564824B871B300C9782B /* EffectList.plist */; };
 		8491113324B309A700E118B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491113224B309A700E118B5 /* AppDelegate.m */; };
 		8491113924B309A700E118B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491113824B309A700E118B5 /* ViewController.m */; };
 		8491113C24B309A700E118B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8491113A24B309A700E118B5 /* Main.storyboard */; };
@@ -40,6 +45,11 @@
 		8404BCC324B4727200C99FB6 /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
 		8404BCC424B4727200C99FB6 /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
 		8404BCC724B4765800C99FB6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8427564024B8191C00C9782B /* SkillList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SkillList.plist; sourceTree = "<group>"; };
+		8427564224B81CBC00C9782B /* BuffList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BuffList.plist; sourceTree = "<group>"; };
+		8427564424B81CC600C9782B /* DebuffList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DebuffList.plist; sourceTree = "<group>"; };
+		8427564624B81D5000C9782B /* ItemList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ItemList.plist; sourceTree = "<group>"; };
+		8427564824B871B300C9782B /* EffectList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EffectList.plist; sourceTree = "<group>"; };
 		8491112E24B309A700E118B5 /* Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8491113124B309A700E118B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8491113224B309A700E118B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -85,6 +95,11 @@
 				84FFCE2224B6B6B90084AB5C /* CommonNavigationController.h */,
 				84FFCE2124B6B6B90084AB5C /* CommonNavigationController.m */,
 				84CDC23424B59F680092F377 /* Constant.h */,
+				8427564024B8191C00C9782B /* SkillList.plist */,
+				8427564224B81CBC00C9782B /* BuffList.plist */,
+				8427564424B81CC600C9782B /* DebuffList.plist */,
+				8427564624B81D5000C9782B /* ItemList.plist */,
+				8427564824B871B300C9782B /* EffectList.plist */,
 				84CDC23324B59F680092F377 /* Constant.m */,
 				8404BCC324B4727200C99FB6 /* UserDefaults.h */,
 				8404BCC424B4727200C99FB6 /* UserDefaults.m */,
@@ -232,7 +247,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FFCE2E24B6C4960084AB5C /* BattleViewController.xib in Resources */,
+				8427564924B871B300C9782B /* EffectList.plist in Resources */,
 				8491114124B309A900E118B5 /* LaunchScreen.storyboard in Resources */,
+				8427564524B81CC600C9782B /* DebuffList.plist in Resources */,
+				8427564724B81D5000C9782B /* ItemList.plist in Resources */,
+				8427564324B81CBC00C9782B /* BuffList.plist in Resources */,
+				8427564124B8191C00C9782B /* SkillList.plist in Resources */,
 				84FFCE3424B7143F0084AB5C /* DescriptionView.xib in Resources */,
 				8491113E24B309A900E118B5 /* Assets.xcassets in Resources */,
 				8491113C24B309A700E118B5 /* Main.storyboard in Resources */,
