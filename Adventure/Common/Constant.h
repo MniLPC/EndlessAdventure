@@ -88,4 +88,3 @@ static inline CGFloat SafeAreaTopHeight(void){
 
 
 
-@{@"name":@"",@"description":@"",@"power",@"base":@""}

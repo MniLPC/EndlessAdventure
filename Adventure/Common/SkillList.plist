@@ -309,7 +309,7 @@ Not use turn Costs around 17% of your max HP</string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Revenge</string>
+		<string>Rebound</string>
 		<key>description</key>
 		<string>Reflect whenever an enemy attacks. Based on MaxHP</string>
 		<key>power</key>

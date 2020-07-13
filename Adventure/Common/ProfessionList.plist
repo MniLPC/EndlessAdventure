@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Warrior</string>
+		<key>description</key>
+		<string>He will fight with Hardened armors and swords and his own body.
+They are the most populous job in the adventurers.</string>
+		<key>Primary</key>
+		<string>STR,DEX</string>
+		<key>ability</key>
+		<string>Super-strength
+Increase damage you deal with STR skills.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ranger</string>
+		<key>description</key>
+		<string>Forest residents to hunting in the well-honed sense.
+They are also in this war for the crisis of the world.</string>
+		<key>Primary</key>
+		<string>DEX,INT</string>
+		<key>ability</key>
+		<string>Smell tracking
+increase chance to encounter treasure.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mage</string>
+		<key>description</key>
+		<string>They fights with the knowledge of spells and the power of their mind.
+He has shield spell for the defense.</string>
+		<key>Primary</key>
+		<string>INT,PIE</string>
+		<key>ability</key>
+		<string>Knowledge
+Experience+15%	</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Priest</string>
+		<key>description</key>
+		<string>She was devoted her life to God.
+She embodies works of God with her faith.</string>
+		<key>Primary</key>
+		<string>PIE,STR</string>
+		<key>ability</key>
+		<string>Refuge
+Reduce damage when you have less HP than MaxHP</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Overlord</string>
+		<key>description</key>
+		<string>No one knows where he came from and his purpose. And no one wants to provoke him.</string>
+		<key>Primary</key>
+		<string>STR</string>
+		<key>ability</key>
+		<string>Berserker
+When your HP is below 20%, all skills cooldown becomes 0.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>DarkKnight</string>
+		<key>description</key>
+		<string>She fight at the expense of her own life.
+Bloods is weapons and armors for her.</string>
+		<key>Primary</key>
+		<string>STR,INT</string>
+		<key>ability</key>
+		<string>Firststrike
+Chance to reduce cooldown (-1) on encounter.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dark Elf</string>
+		<key>description</key>
+		<string>These heretics have been despised as &quot;cursed blood&quot;. In fact, they are not cursed and forced to do dirty work and discriminated.</string>
+		<key>Primary</key>
+		<string>INT,DEX</string>
+		<key>ability</key>
+		<string>Avoid Trap
+You can avoid traps.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Monk</string>
+		<key>description</key>
+		<string>The successor of a secret art that&apos;s passed down in the East.</string>
+		<key>Primary</key>
+		<string>STR,PiE</string>
+		<key>ability</key>
+		<string>Ascetic
+Each negative state will provide you with damage reduction</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Elf</string>
+		<key>description</key>
+		<string>She has been seen in our town.
+Now She can not be seen in our town.</string>
+		<key>Primary</key>
+		<string>DEX</string>
+		<key>ability</key>
+		<string>Perception
+Increase encounter with enemies.	</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Samurai</string>
+		<key>description</key>
+		<string>She came from far away, are followers of the Bushido.
+Her homeland was feared by their strength.</string>
+		<key>Primary</key>
+		<string>STR,DEX</string>
+		<key>ability</key>
+		<string>Perception
+Increase encounter with enemies.	</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Druid</string>
+		<key>description</key>
+		<string>She lives hidden in the outback of the forest.
+She draws natural power from forests.</string>
+		<key>Primary</key>
+		<string>INT,PIE</string>
+		<key>ability</key>
+		<string>Perception
+Increase encounter with enemies.	</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Paladin</string>
+		<key>description</key>
+		<string>	They had destroyed some pagans.
+In front of the crisis of the world, Differences of religion became a trivial problem.</string>
+		<key>Primary</key>
+		<string>STR,PIE</string>
+		<key>ability</key>
+		<string>Perception
+Increase encounter with enemies.	</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dragoon</string>
+		<key>description</key>
+		<string>He is dragon-half. He is respect for pride than life as a warrior.</string>
+		<key>Primary</key>
+		<string>STR</string>
+		<key>ability</key>
+		<string>Perception
+Increase encounter with enemies.	</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Witch</string>
+		<key>description</key>
+		<string>	She spent for life and property of others.
+Crimes and punishments will be forgotten after she die.</string>
+		<key>Primary</key>
+		<string>INT</string>
+		<key>ability</key>
+		<string>Perception
+Increase encounter with enemies.	</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Viking</string>
+		<key>description</key>
+		<string>A seafaring warrior from savage tribe that were brimming with rage.His endurace is uncanny.</string>
+		<key>Primary</key>
+		<string>STR</string>
+		<key>ability</key>
+		<string>Perception
+Increase encounter with enemies.	</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fairy</string>
+		<key>description</key>
+		<string>A fairy that lives hidden in the forest. </string>
+		<key>Primary</key>
+		<string>PIE,INT</string>
+		<key>ability</key>
+		<string>Perception
+Increase encounter with enemies.	</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Valkyrie</string>
+		<key>description</key>
+		<string>A servant of God who risks her life on the battlefield.These women believe they can find God within the smell of blood.</string>
+		<key>Primary</key>
+		<string>STR,PIE</string>
+		<key>ability</key>
+		<string>Perception
+Increase encounter with enemies.	</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>HalfGod</string>
+		<key>description</key>
+		<string>The apostles of the gods on earth. They have part of the power of God.</string>
+		<key>Primary</key>
+		<string>PIE,STR</string>
+		<key>ability</key>
+		<string>Perception
+Increase encounter with enemies.	</string>
+	</dict>
+</array>
+</plist>
