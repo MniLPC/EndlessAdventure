@@ -196,6 +196,54 @@
 	</dict>
 	<dict>
 		<key>name</key>
+		<string>Charge</string>
+		<key>description</key>
+		<string>Attack an enemy. Based on STR Power200</string>
+		<key>power</key>
+		<string>200</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Refresh</string>
+		<key>description</key>
+		<string>Remove all effect on yourself.</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Hatered</string>
+		<key>description</key>
+		<string>The more you lose your HP, the more poewrful your attack is.</string>
+		<key>power</key>
+		<string>30</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
 		<string>Slash</string>
 		<key>description</key>
 		<string>Attack an enemy.Based on STR. Power 120</string>
@@ -341,11 +389,123 @@ Not use turn Costs around 17% of your max HP</string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Charge</string>
+		<string>Pierce</string>
 		<key>description</key>
-		<string>Attack an enemy. Based on STR Power200</string>
+		<string>Attack an enemy. Based on STR ,Power85.</string>
+		<key>power</key>
+		<string>85</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Venom</string>
+		<key>description</key>
+		<string>Add Damage over time on an enemy. Based on INT, Power60x3Turn</string>
+		<key>power</key>
+		<string>0</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>1</integer>
+		<key>base</key>
+		<string>INT</string>
+		<key>cooldown</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Iceneedle</string>
+		<key>description</key>
+		<string>Attack an enemy. Based on INT. Power200</string>
 		<key>power</key>
 		<string>200</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>INT</string>
+		<key>cooldown</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Vertical Slash</string>
+		<key>description</key>
+		<string>Attack an enemy. Based on STR Power185</string>
+		<key>power</key>
+		<string>185</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dagger throw	</string>
+		<key>description</key>
+		<string>Attack an enemy without wasting your turn. Based on DEX Power100</string>
+		<key>power</key>
+		<string>100</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>INT</string>
+		<key>cooldown</key>
+		<string>-1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tackle</string>
+		<key>description</key>
+		<string>High accuracy attack. Based on STR Power100</string>
+		<key>power</key>
+		<string>100</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Thunderstrike</string>
+		<key>description</key>
+		<string>Double attack. Based on STR Based on INT Power175+175</string>
+		<key>power</key>
+		<string>350</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Spear of Pierce</string>
+		<key>description</key>
+		<string>	Attack an enemy. It will ignore opponent&apos;s defense. Based on STR Power100</string>
+		<key>power</key>
+		<string>100</string>
 		<key>buff</key>
 		<integer>0</integer>
 		<key>debuff</key>
@@ -357,131 +517,117 @@ Not use turn Costs around 17% of your max HP</string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Refresh</string>
+		<string>Backstab</string>
 		<key>description</key>
-		<string>Remove all effect on yourself.</string>
+		<string>	Attack an enemy. It will ignore opponent&apos;s defense. Based on DEX Power360</string>
 		<key>power</key>
-		<string>0</string>
+		<string>360</string>
 		<key>buff</key>
 		<integer>0</integer>
 		<key>debuff</key>
 		<integer>0</integer>
 		<key>base</key>
 		<string>STR</string>
+		<key>cooldown</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Secret hole</string>
+		<key>description</key>
+		<string>Deal delayed damage to an opponent. Based on STR Power1000</string>
+		<key>power</key>
+		<string>1000</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>accuracy</key>
+		<string>10</string>
+		<key>name</key>
+		<string>Death word	</string>
+		<key>description</key>
+		<string>Kill an enemy. Low accuracy.</string>
+		<key>power</key>
+		<string>99999</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>STR</string>
+		<key>cooldown</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dark Sphere</string>
+		<key>description</key>
+		<string>Attack an enemy. Based on INT Power150</string>
+		<key>power</key>
+		<string>150</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>INT</string>
+		<key>cooldown</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Deathsickle</string>
+		<key>description</key>
+		<string>Attack an enemy. Based on HP</string>
+		<key>power</key>
+		<string>100</string>
+		<key>buff</key>
+		<integer>0</integer>
+		<key>debuff</key>
+		<integer>0</integer>
+		<key>base</key>
+		<string>HP</string>
 		<key>cooldown</key>
 		<string>1</string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Hatered</string>
+		<string>Grandcross</string>
 		<key>description</key>
-		<string>The more you lose your HP, the more poewrful your attack is.</string>
+		<string>Powerful attack. Based on PIE, Power400</string>
 		<key>power</key>
-		<string>30</string>
+		<string>400</string>
 		<key>buff</key>
 		<integer>0</integer>
 		<key>debuff</key>
 		<integer>0</integer>
 		<key>base</key>
-		<string>STR</string>
+		<string>PIE</string>
 		<key>cooldown</key>
-		<string>0</string>
+		<string>4</string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Tornado Slash</string>
+		<string>Gravity</string>
 		<key>description</key>
-		<string>A powerful attack.Based on STR power 800</string>
+		<string>Powerful attack. Based on HP</string>
 		<key>power</key>
-		<string>800</string>
+		<string>300</string>
 		<key>buff</key>
 		<integer>0</integer>
 		<key>debuff</key>
 		<integer>0</integer>
 		<key>base</key>
-		<string>STR</string>
+		<string>HP</string>
 		<key>cooldown</key>
-		<string>5</string>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>Tornado Slash</string>
-		<key>description</key>
-		<string>A powerful attack.Based on STR power 800</string>
-		<key>power</key>
-		<string>800</string>
-		<key>buff</key>
-		<integer>0</integer>
-		<key>debuff</key>
-		<integer>0</integer>
-		<key>base</key>
-		<string>STR</string>
-		<key>cooldown</key>
-		<string>5</string>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>Tornado Slash</string>
-		<key>description</key>
-		<string>A powerful attack.Based on STR power 800</string>
-		<key>power</key>
-		<string>800</string>
-		<key>buff</key>
-		<integer>0</integer>
-		<key>debuff</key>
-		<integer>0</integer>
-		<key>base</key>
-		<string>STR</string>
-		<key>cooldown</key>
-		<string>5</string>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>Tornado Slash</string>
-		<key>description</key>
-		<string>A powerful attack.Based on STR power 800</string>
-		<key>power</key>
-		<string>800</string>
-		<key>buff</key>
-		<integer>0</integer>
-		<key>debuff</key>
-		<integer>0</integer>
-		<key>base</key>
-		<string>STR</string>
-		<key>cooldown</key>
-		<string>5</string>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>Tornado Slash</string>
-		<key>description</key>
-		<string>A powerful attack.Based on STR power 800</string>
-		<key>power</key>
-		<string>800</string>
-		<key>buff</key>
-		<integer>0</integer>
-		<key>debuff</key>
-		<integer>0</integer>
-		<key>base</key>
-		<string>STR</string>
-		<key>cooldown</key>
-		<string>5</string>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>Tornado Slash</string>
-		<key>description</key>
-		<string>A powerful attack.Based on STR power 800</string>
-		<key>power</key>
-		<string>800</string>
-		<key>buff</key>
-		<integer>0</integer>
-		<key>debuff</key>
-		<integer>0</integer>
-		<key>base</key>
-		<string>STR</string>
-		<key>cooldown</key>
-		<string>5</string>
+		<string>4</string>
 	</dict>
 </array>
 </plist>

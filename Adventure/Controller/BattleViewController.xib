@@ -27,14 +27,14 @@
             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character1" translatesAutoresizingMaskIntoConstraints="NO" id="sUC-uG-E3k">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character_1" translatesAutoresizingMaskIntoConstraints="NO" id="sUC-uG-E3k">
                     <rect key="frame" x="0.0" y="120" width="255" height="255"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="255" id="Aa4-9M-3ZZ"/>
                         <constraint firstAttribute="width" constant="255" id="Rfr-Px-cmN"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character2" translatesAutoresizingMaskIntoConstraints="NO" id="mmH-tz-fpp">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character_1" translatesAutoresizingMaskIntoConstraints="NO" id="mmH-tz-fpp">
                     <rect key="frame" x="412" y="0.0" width="255" height="255"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="255" id="PBq-Fz-YjV"/>
@@ -42,7 +42,7 @@
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stateFrame" translatesAutoresizingMaskIntoConstraints="NO" id="Bw6-g3-6Ul">
-                    <rect key="frame" x="5" y="73" width="240" height="60"/>
+                    <rect key="frame" x="5" y="64" width="240" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="240" id="FEt-dF-xXk"/>
                         <constraint firstAttribute="height" constant="60" id="kHT-WV-yPu"/>
@@ -105,27 +105,27 @@
                     </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HpFrame" translatesAutoresizingMaskIntoConstraints="NO" id="Mu6-rg-K4N">
-                    <rect key="frame" x="21" y="105" width="200" height="15"/>
+                    <rect key="frame" x="21" y="96" width="200" height="15"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="HKP-pt-YB6"/>
                         <constraint firstAttribute="height" constant="15" id="IE6-vz-BuU"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HpBar" translatesAutoresizingMaskIntoConstraints="NO" id="x33-T8-H6z">
-                    <rect key="frame" x="21" y="105" width="200" height="15"/>
+                    <rect key="frame" x="21" y="96" width="200" height="15"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="CPy-yd-MQB"/>
                         <constraint firstAttribute="height" constant="15" id="x7f-un-CV9"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Op3-Hh-dqP">
-                    <rect key="frame" x="28" y="87" width="29" height="19"/>
+                    <rect key="frame" x="28" y="78" width="29" height="19"/>
                     <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samwell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P27-53-QZU">
-                    <rect key="frame" x="70" y="87" width="65" height="19"/>
+                    <rect key="frame" x="70" y="78" width="65" height="19"/>
                     <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -261,7 +261,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3V-q6-vP4">
-                    <rect key="frame" x="94" y="104" width="62" height="19"/>
+                    <rect key="frame" x="94" y="95" width="62" height="19"/>
                     <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -337,7 +337,7 @@
                 <constraint firstItem="zpY-xc-XKB" firstAttribute="leading" secondItem="eIJ-eo-cKb" secondAttribute="leading" id="vkA-Ow-Ojg"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="oIe-97-WRk" secondAttribute="trailing" constant="5" id="xLG-XP-Mib"/>
                 <constraint firstItem="O5o-36-qi5" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="15" id="ydQ-Gm-SAu"/>
-                <constraint firstItem="Bw6-g3-6Ul" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.55" id="zaE-aY-zFX"/>
+                <constraint firstItem="Bw6-g3-6Ul" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.5" id="zaE-aY-zFX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="131.52709359605913" y="152.80000000000001"/>
@@ -347,8 +347,7 @@
         <image name="HpBar" width="78" height="10"/>
         <image name="HpFrame" width="78" height="10"/>
         <image name="chaos" width="256" height="256"/>
-        <image name="character1" width="879" height="1000"/>
-        <image name="character2" width="880" height="1000"/>
+        <image name="character_1" width="909" height="1000"/>
         <image name="setting" width="100" height="100"/>
         <image name="skill1" width="256" height="256"/>
         <image name="stateFrame" width="939" height="244"/>
