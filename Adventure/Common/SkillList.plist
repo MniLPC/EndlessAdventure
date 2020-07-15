@@ -192,7 +192,9 @@
 		<key>base</key>
 		<string>STR</string>
 		<key>cooldown</key>
-		<string>-1</string>
+		<string>3</string>
+		<key>Instant</key>
+		<string>1</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -289,7 +291,9 @@ Not use turn Costs around 17% of your max HP</string>
 		<key>base</key>
 		<string>STR</string>
 		<key>cooldown</key>
-		<string>-1</string>
+		<string>3</string>
+		<key>Instant</key>
+		<string>1</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -465,7 +469,9 @@ Not use turn Costs around 17% of your max HP</string>
 		<key>base</key>
 		<string>INT</string>
 		<key>cooldown</key>
-		<string>-1</string>
+		<string>3</string>
+		<key>Instant</key>
+		<string>1</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -503,7 +509,7 @@ Not use turn Costs around 17% of your max HP</string>
 		<key>name</key>
 		<string>Spear of Pierce</string>
 		<key>description</key>
-		<string>	Attack an enemy. It will ignore opponent&apos;s defense. Based on STR Power100</string>
+		<string>Attack an enemy. It will ignore opponent&apos;s defense. Based on STR Power100</string>
 		<key>power</key>
 		<string>100</string>
 		<key>buff</key>
@@ -519,7 +525,7 @@ Not use turn Costs around 17% of your max HP</string>
 		<key>name</key>
 		<string>Backstab</string>
 		<key>description</key>
-		<string>	Attack an enemy. It will ignore opponent&apos;s defense. Based on DEX Power360</string>
+		<string>Attack an enemy. It will ignore opponent&apos;s defense. Based on DEX Power360</string>
 		<key>power</key>
 		<string>360</string>
 		<key>buff</key>

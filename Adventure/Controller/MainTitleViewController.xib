@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainTitleViewController">
+            <connections>
+                <outlet property="collectionView" destination="Z0i-cD-9Ac" id="cR4-pw-dKl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Z0i-cD-9Ac">
+                    <rect key="frame" x="40" y="115" width="587" height="220"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="220" id="4tT-vJ-g30"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RTa-dA-544">
+                        <size key="itemSize" width="160" height="200"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="E5X-oS-f1c"/>
+                        <outlet property="delegate" destination="-1" id="fAW-T3-iGw"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKg-jZ-RyC">
+                    <rect key="frame" x="587" y="10" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="1Qy-bt-2TX"/>
+                        <constraint firstAttribute="width" constant="40" id="vq5-jm-AJF"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="statistics"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKj-dY-Ivu">
+                    <rect key="frame" x="582.5" y="48" width="49" height="15"/>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="12"/>
+                    <color key="textColor" red="0.99215686270000003" green="0.85098039219999999" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4G4-v5-YJY">
+                    <rect key="frame" x="517" y="10" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="3zg-Hr-Mxc"/>
+                        <constraint firstAttribute="height" constant="40" id="hAU-3k-B2Y"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="mission"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mission" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jun-Rv-yGK">
+                    <rect key="frame" x="516" y="48" width="42" height="15"/>
+                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="12"/>
+                    <color key="textColor" red="0.99215686270000003" green="0.85098039219999999" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4G4-v5-YJY" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="7lX-11-scR"/>
+                <constraint firstItem="Z0i-cD-9Ac" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.2" id="JXq-l2-VkW"/>
+                <constraint firstItem="kKg-jZ-RyC" firstAttribute="leading" secondItem="4G4-v5-YJY" secondAttribute="trailing" constant="30" id="JYe-TH-DtS"/>
+                <constraint firstItem="4G4-v5-YJY" firstAttribute="centerX" secondItem="jun-Rv-yGK" secondAttribute="centerX" id="Mhh-Eg-nEy"/>
+                <constraint firstItem="kKg-jZ-RyC" firstAttribute="centerX" secondItem="AKj-dY-Ivu" secondAttribute="centerX" id="OS6-zs-CrP"/>
+                <constraint firstItem="kKg-jZ-RyC" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="QS5-qD-rqG"/>
+                <constraint firstItem="jun-Rv-yGK" firstAttribute="top" secondItem="4G4-v5-YJY" secondAttribute="bottom" constant="-2" id="S9F-Zy-ADG"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="kKg-jZ-RyC" secondAttribute="trailing" constant="40" id="SNI-FM-I8i"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Z0i-cD-9Ac" secondAttribute="trailing" constant="40" id="TkV-Uu-Mx2"/>
+                <constraint firstItem="Z0i-cD-9Ac" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="40" id="YlE-71-7U1"/>
+                <constraint firstItem="AKj-dY-Ivu" firstAttribute="top" secondItem="kKg-jZ-RyC" secondAttribute="bottom" constant="-2" id="trc-JT-int"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="131.78410794602701" y="135.19999999999999"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mission" width="256" height="256"/>
+        <image name="statistics" width="256" height="256"/>
+    </resources>
+</document>

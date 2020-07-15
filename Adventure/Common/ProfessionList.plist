@@ -6,8 +6,7 @@
 		<key>name</key>
 		<string>Warrior</string>
 		<key>description</key>
-		<string>He will fight with Hardened armors and swords and his own body.
-They are the most populous job in the adventurers.</string>
+		<string>He will fight with Hardened armors and swords and his own body.</string>
 		<key>Primary</key>
 		<string>STR,DEX</string>
 		<key>ability</key>
@@ -123,8 +122,8 @@ Increase encounter with enemies.	</string>
 		<key>name</key>
 		<string>Druid</string>
 		<key>description</key>
-		<string>She lives hidden in the outback of the forest.
-She draws natural power from forests.</string>
+		<string>He lives hidden in the outback of the forest.
+He draws natural power from forests.</string>
 		<key>Primary</key>
 		<string>INT,PIE</string>
 		<key>ability</key>
@@ -135,7 +134,7 @@ Increase encounter with enemies.	</string>
 		<key>name</key>
 		<string>Paladin</string>
 		<key>description</key>
-		<string>	They had destroyed some pagans.
+		<string>They had destroyed some pagans.
 In front of the crisis of the world, Differences of religion became a trivial problem.</string>
 		<key>Primary</key>
 		<string>STR,PIE</string>
@@ -158,7 +157,7 @@ Increase encounter with enemies.	</string>
 		<key>name</key>
 		<string>Witch</string>
 		<key>description</key>
-		<string>	She spent for life and property of others.
+		<string>She spent for life and property of others.
 Crimes and punishments will be forgotten after she die.</string>
 		<key>Primary</key>
 		<string>INT</string>

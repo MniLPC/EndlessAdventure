@@ -7,10 +7,16 @@
 //
 
 #import "ProfessionSelectViewController.h"
-
+#import "ProfessionTableViewCell.h"
+#import "DescriptionView.h"
 @interface ProfessionSelectViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (weak, nonatomic) IBOutlet UIImageView *characterImageView;
+@property (weak, nonatomic) IBOutlet UITextView *characterDescriptionTextView;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *skillBtns;
+@property (nonatomic,assign) NSInteger currentIndex;
+@property (weak, nonatomic) IBOutlet UIButton *confirmBtn;
+@property (nonatomic,strong) DescriptionView * descriptionView;
 @end
 
 @implementation ProfessionSelectViewController
@@ -18,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.backgroundColor = [UIColor clearColor];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ProfessionTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -30,14 +37,60 @@
     
     return 18;
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 40;
+    
+}
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    <#code#>
+    ProfessionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[ProfessionTableViewCell alloc]init];
+    }
+    NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"ProfessionList"ofType:@"plist"];
+
+    NSArray * professionArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
+    NSDictionary * professionDict = professionArray[indexPath.row];
+    cell.nameLabel.text = professionDict[@"name"];
+    return cell;
+    
+    
+    
+    
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.currentIndex = indexPath.row;
+    NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"ProfessionList"ofType:@"plist"];
 
+       NSArray * professionArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
+       NSDictionary * professionDict = professionArray[indexPath.row];
+    self.characterImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"character_%ld",indexPath.row]];
+    NSString * text = professionDict[@"description"];
+    text = [text stringByAppendingFormat:@"\n\nAbility:\n%@",professionDict[@"ability"]];
+    self.characterDescriptionTextView.text = text;
+    for (UIButton * btn in self.skillBtns) {
+        [btn setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"skill%ld",indexPath.row*3+btn.tag]] forState:UIControlStateNormal];
+    }
+    
+    
+    
+}
+- (IBAction)clickSkill:(UIButton *)sender {
+    
+     [DescriptionView ShowDescriptionWithType:1 index:self.currentIndex*3+sender.tag];
+    
+}
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    for (UIView * view in kKeyWindow.subviews) {
+        if ([view isKindOfClass:[DescriptionView class]]) {
+            [view removeFromSuperview];
+        }
+    }
+    
+}
 /*
  #pragma mark - Navigation
  
@@ -48,48 +101,6 @@
  }
  */
 
-- (void)encodeWithCoder:(nonnull NSCoder *)coder {
-    <#code#>
-}
 
-- (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection {
-    <#code#>
-}
-
-- (void)preferredContentSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
-    <#code#>
-}
-
-- (CGSize)sizeForChildContentContainer:(nonnull id<UIContentContainer>)container withParentContainerSize:(CGSize)parentSize {
-    <#code#>
-}
-
-- (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
-    <#code#>
-}
-
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
-    <#code#>
-}
-
-- (void)willTransitionToTraitCollection:(nonnull UITraitCollection *)newCollection withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
-    <#code#>
-}
-
-- (void)didUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context withAnimationCoordinator:(nonnull UIFocusAnimationCoordinator *)coordinator {
-    <#code#>
-}
-
-- (void)setNeedsFocusUpdate {
-    <#code#>
-}
-
-- (BOOL)shouldUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context {
-    <#code#>
-}
-
-- (void)updateFocusIfNeeded {
-    <#code#>
-}
 
 @end

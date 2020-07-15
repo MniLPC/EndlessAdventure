@@ -36,6 +36,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="nameLabel" destination="dd1-AR-Unm" id="565-g1-isU"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </tableViewCell>
     </objects>

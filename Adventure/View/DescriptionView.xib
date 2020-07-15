@@ -60,6 +60,10 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="auy-ku-jFN"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="OHj-Cs-dUH" id="5R1-wW-EH0"/>
+                <outlet property="nameLabel" destination="mbx-NZ-2is" id="RJn-z8-yAx"/>
+            </connections>
             <point key="canvasLocation" x="60.869565217391312" y="71.316964285714278"/>
         </view>
     </objects>

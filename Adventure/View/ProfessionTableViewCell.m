@@ -13,6 +13,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.backgroundColor = [UIColor clearColor];
+    UIView * bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
+    bgView.backgroundColor = ColorWithHex(0xFFC125);
+    self.selectedBackgroundView = bgView;
     // Initialization code
 }
 

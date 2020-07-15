@@ -18,6 +18,10 @@
 		8427564524B81CC600C9782B /* DebuffList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427564424B81CC600C9782B /* DebuffList.plist */; };
 		8427564724B81D5000C9782B /* ItemList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427564624B81D5000C9782B /* ItemList.plist */; };
 		8427564924B871B300C9782B /* EffectList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427564824B871B300C9782B /* EffectList.plist */; };
+		845218EB24BEEE300016C541 /* MainTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845218E924BEEE300016C541 /* MainTitleViewController.m */; };
+		845218EC24BEEE300016C541 /* MainTitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845218EA24BEEE300016C541 /* MainTitleViewController.xib */; };
+		845218F524BF03E20016C541 /* CharacterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845218F324BF03E20016C541 /* CharacterCollectionViewCell.m */; };
+		845218F624BF03E20016C541 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845218F424BF03E20016C541 /* CharacterCollectionViewCell.xib */; };
 		8491113324B309A700E118B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491113224B309A700E118B5 /* AppDelegate.m */; };
 		8491113924B309A700E118B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491113824B309A700E118B5 /* ViewController.m */; };
 		8491113C24B309A700E118B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8491113A24B309A700E118B5 /* Main.storyboard */; };
@@ -56,6 +60,12 @@
 		8427564424B81CC600C9782B /* DebuffList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DebuffList.plist; sourceTree = "<group>"; };
 		8427564624B81D5000C9782B /* ItemList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ItemList.plist; sourceTree = "<group>"; };
 		8427564824B871B300C9782B /* EffectList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EffectList.plist; sourceTree = "<group>"; };
+		845218E824BEEE300016C541 /* MainTitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTitleViewController.h; sourceTree = "<group>"; };
+		845218E924BEEE300016C541 /* MainTitleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTitleViewController.m; sourceTree = "<group>"; };
+		845218EA24BEEE300016C541 /* MainTitleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTitleViewController.xib; sourceTree = "<group>"; };
+		845218F224BF03E20016C541 /* CharacterCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterCollectionViewCell.h; sourceTree = "<group>"; };
+		845218F324BF03E20016C541 /* CharacterCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterCollectionViewCell.m; sourceTree = "<group>"; };
+		845218F424BF03E20016C541 /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
 		8491112E24B309A700E118B5 /* Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8491113124B309A700E118B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8491113224B309A700E118B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -164,6 +174,9 @@
 				84FFCE2B24B6C4960084AB5C /* BattleViewController.m */,
 				84FFCE2C24B6C4960084AB5C /* BattleViewController.xib */,
 				84A1D0EA24BD9EF200C24F7D /* ProfessionSelectViewController.h */,
+				845218E824BEEE300016C541 /* MainTitleViewController.h */,
+				845218E924BEEE300016C541 /* MainTitleViewController.m */,
+				845218EA24BEEE300016C541 /* MainTitleViewController.xib */,
 				84A1D0EB24BD9EF200C24F7D /* ProfessionSelectViewController.m */,
 				84A1D0EC24BD9EF200C24F7D /* ProfessionSelectViewController.xib */,
 			);
@@ -204,6 +217,9 @@
 				84A1D0EF24BDAA3100C24F7D /* ProfessionTableViewCell.h */,
 				84A1D0F024BDAA3100C24F7D /* ProfessionTableViewCell.m */,
 				84A1D0F124BDAA3100C24F7D /* ProfessionTableViewCell.xib */,
+				845218F224BF03E20016C541 /* CharacterCollectionViewCell.h */,
+				845218F324BF03E20016C541 /* CharacterCollectionViewCell.m */,
+				845218F424BF03E20016C541 /* CharacterCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,8 +285,10 @@
 				8427564924B871B300C9782B /* EffectList.plist in Resources */,
 				8491114124B309A900E118B5 /* LaunchScreen.storyboard in Resources */,
 				8410B7BB24BC05AC00E50215 /* ProfessionList.plist in Resources */,
+				845218F624BF03E20016C541 /* CharacterCollectionViewCell.xib in Resources */,
 				8427564524B81CC600C9782B /* DebuffList.plist in Resources */,
 				8427564724B81D5000C9782B /* ItemList.plist in Resources */,
+				845218EC24BEEE300016C541 /* MainTitleViewController.xib in Resources */,
 				8427564324B81CBC00C9782B /* BuffList.plist in Resources */,
 				8427564124B8191C00C9782B /* SkillList.plist in Resources */,
 				84FFCE3424B7143F0084AB5C /* DescriptionView.xib in Resources */,
@@ -303,7 +321,9 @@
 				8491114424B309A900E118B5 /* main.m in Sources */,
 				8404BCC224B4620E00C99FB6 /* ItemAttributes.m in Sources */,
 				8404BCBC24B4613B00C99FB6 /* AttributeCalculationTool.m in Sources */,
+				845218EB24BEEE300016C541 /* MainTitleViewController.m in Sources */,
 				84A1D0F224BDAA3100C24F7D /* ProfessionTableViewCell.m in Sources */,
+				845218F524BF03E20016C541 /* CharacterCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
