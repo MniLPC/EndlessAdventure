@@ -48,15 +48,10 @@
         cell = [[ProfessionTableViewCell alloc]init];
     }
     NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"ProfessionList"ofType:@"plist"];
-
     NSArray * professionArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
     NSDictionary * professionDict = professionArray[indexPath.row];
     cell.nameLabel.text = professionDict[@"name"];
     return cell;
-    
-    
-    
-    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -72,9 +67,6 @@
     for (UIButton * btn in self.skillBtns) {
         [btn setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"skill%ld",indexPath.row*3+btn.tag]] forState:UIControlStateNormal];
     }
-    
-    
-    
 }
 - (IBAction)clickSkill:(UIButton *)sender {
     
@@ -89,7 +81,6 @@
             [view removeFromSuperview];
         }
     }
-    
 }
 /*
  #pragma mark - Navigation

@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pdX-tC-WbJ">
-                    <rect key="frame" x="15" y="40" width="120" height="295"/>
+                    <rect key="frame" x="35" y="60" width="120" height="275"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="1fH-f0-CDn"/>
@@ -93,8 +93,8 @@
                         <constraint firstAttribute="height" constant="57" id="sRX-PZ-p42"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
-                    <state key="normal" title="Start Adventure" backgroundImage="btn">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="-2000 Soul Shard unlock" backgroundImage="btn">
+                        <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0p-VE-IAC">
@@ -113,6 +113,14 @@
                         <constraint firstAttribute="height" constant="30" id="N8d-qc-3eM"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb2-w6-NiP">
+                    <rect key="frame" x="15" y="15" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="45N-Re-VkG"/>
+                        <constraint firstAttribute="width" constant="40" id="MDW-NM-i9n"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="return"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -124,13 +132,15 @@
                 <constraint firstItem="U0p-VE-IAC" firstAttribute="centerY" secondItem="qNP-mk-wty" secondAttribute="centerY" id="Jxh-Tz-dU6"/>
                 <constraint firstItem="YK4-DG-dQF" firstAttribute="centerX" secondItem="PMR-66-8Zq" secondAttribute="centerX" id="YoA-yj-Lt2"/>
                 <constraint firstItem="U0p-VE-IAC" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="Yzm-9B-gso"/>
+                <constraint firstItem="bb2-w6-NiP" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="Zwc-ik-Ooi"/>
                 <constraint firstItem="YK4-DG-dQF" firstAttribute="top" secondItem="PMR-66-8Zq" secondAttribute="bottom" constant="10" id="cWd-ea-7i9"/>
                 <constraint firstItem="3ft-sk-U3C" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.9" id="g2z-tn-0Ov"/>
-                <constraint firstItem="pdX-tC-WbJ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="40" id="g7P-Fu-EtX"/>
-                <constraint firstItem="pdX-tC-WbJ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="iBz-SF-jqh"/>
+                <constraint firstItem="pdX-tC-WbJ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="60" id="g7P-Fu-EtX"/>
+                <constraint firstItem="pdX-tC-WbJ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="35" id="iBz-SF-jqh"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="PMR-66-8Zq" secondAttribute="trailing" constant="30" id="kHR-rd-MSy"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="U0p-VE-IAC" secondAttribute="trailing" constant="20" id="lmM-tG-sCB"/>
                 <constraint firstItem="yU7-hk-MLb" firstAttribute="leading" secondItem="PMR-66-8Zq" secondAttribute="leading" id="pKh-HD-Y4J"/>
+                <constraint firstItem="bb2-w6-NiP" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="15" id="sUA-fB-00I"/>
                 <constraint firstItem="yU7-hk-MLb" firstAttribute="trailing" secondItem="PMR-66-8Zq" secondAttribute="trailing" id="u6v-EA-3Py"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
@@ -140,5 +150,6 @@
     <resources>
         <image name="SoulShard" width="256" height="256"/>
         <image name="btn" width="186" height="92"/>
+        <image name="return" width="94" height="55"/>
     </resources>
 </document>

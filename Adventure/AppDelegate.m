@@ -10,6 +10,7 @@
 #import "BattleViewController.h"
 #import "ProfessionSelectViewController.h"
 #import "MainTitleViewController.h"
+#import "CommonNavigationController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,9 +19,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
     MainTitleViewController * bvc = [[MainTitleViewController alloc]initWithNibName:@"MainTitleViewController" bundle:nil];
+    CommonNavigationController * navi = [[CommonNavigationController alloc]initWithRootViewController:bvc];
+
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = bvc;
+    self.window.rootViewController = navi;
     [self.window makeKeyAndVisible];
     
     

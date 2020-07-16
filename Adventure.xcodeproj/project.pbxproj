@@ -18,6 +18,12 @@
 		8427564524B81CC600C9782B /* DebuffList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427564424B81CC600C9782B /* DebuffList.plist */; };
 		8427564724B81D5000C9782B /* ItemList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427564624B81D5000C9782B /* ItemList.plist */; };
 		8427564924B871B300C9782B /* EffectList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8427564824B871B300C9782B /* EffectList.plist */; };
+		8444D5B924C02DA5000D3B24 /* DestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444D5B724C02DA5000D3B24 /* DestinationViewController.m */; };
+		8444D5BA24C02DA5000D3B24 /* DestinationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8444D5B824C02DA5000D3B24 /* DestinationViewController.xib */; };
+		8444D5BE24C039AD000D3B24 /* PathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444D5BC24C039AD000D3B24 /* PathViewController.m */; };
+		8444D5BF24C039AD000D3B24 /* PathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8444D5BD24C039AD000D3B24 /* PathViewController.xib */; };
+		8444D5C424C03D21000D3B24 /* RoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8444D5C324C03D21000D3B24 /* RoomView.xib */; };
+		8444D5C724C05022000D3B24 /* RoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444D5C624C05022000D3B24 /* RoomView.m */; };
 		845218EB24BEEE300016C541 /* MainTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845218E924BEEE300016C541 /* MainTitleViewController.m */; };
 		845218EC24BEEE300016C541 /* MainTitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845218EA24BEEE300016C541 /* MainTitleViewController.xib */; };
 		845218F524BF03E20016C541 /* CharacterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845218F324BF03E20016C541 /* CharacterCollectionViewCell.m */; };
@@ -60,6 +66,15 @@
 		8427564424B81CC600C9782B /* DebuffList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DebuffList.plist; sourceTree = "<group>"; };
 		8427564624B81D5000C9782B /* ItemList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ItemList.plist; sourceTree = "<group>"; };
 		8427564824B871B300C9782B /* EffectList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EffectList.plist; sourceTree = "<group>"; };
+		8444D5B624C02DA5000D3B24 /* DestinationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestinationViewController.h; sourceTree = "<group>"; };
+		8444D5B724C02DA5000D3B24 /* DestinationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DestinationViewController.m; sourceTree = "<group>"; };
+		8444D5B824C02DA5000D3B24 /* DestinationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DestinationViewController.xib; sourceTree = "<group>"; };
+		8444D5BB24C039AD000D3B24 /* PathViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathViewController.h; sourceTree = "<group>"; };
+		8444D5BC24C039AD000D3B24 /* PathViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathViewController.m; sourceTree = "<group>"; };
+		8444D5BD24C039AD000D3B24 /* PathViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PathViewController.xib; sourceTree = "<group>"; };
+		8444D5C324C03D21000D3B24 /* RoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomView.xib; sourceTree = "<group>"; };
+		8444D5C524C05022000D3B24 /* RoomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoomView.h; sourceTree = "<group>"; };
+		8444D5C624C05022000D3B24 /* RoomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoomView.m; sourceTree = "<group>"; };
 		845218E824BEEE300016C541 /* MainTitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTitleViewController.h; sourceTree = "<group>"; };
 		845218E924BEEE300016C541 /* MainTitleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTitleViewController.m; sourceTree = "<group>"; };
 		845218EA24BEEE300016C541 /* MainTitleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTitleViewController.xib; sourceTree = "<group>"; };
@@ -173,12 +188,18 @@
 				84FFCE2A24B6C4960084AB5C /* BattleViewController.h */,
 				84FFCE2B24B6C4960084AB5C /* BattleViewController.m */,
 				84FFCE2C24B6C4960084AB5C /* BattleViewController.xib */,
-				84A1D0EA24BD9EF200C24F7D /* ProfessionSelectViewController.h */,
 				845218E824BEEE300016C541 /* MainTitleViewController.h */,
 				845218E924BEEE300016C541 /* MainTitleViewController.m */,
 				845218EA24BEEE300016C541 /* MainTitleViewController.xib */,
+				84A1D0EA24BD9EF200C24F7D /* ProfessionSelectViewController.h */,
 				84A1D0EB24BD9EF200C24F7D /* ProfessionSelectViewController.m */,
 				84A1D0EC24BD9EF200C24F7D /* ProfessionSelectViewController.xib */,
+				8444D5B624C02DA5000D3B24 /* DestinationViewController.h */,
+				8444D5B724C02DA5000D3B24 /* DestinationViewController.m */,
+				8444D5B824C02DA5000D3B24 /* DestinationViewController.xib */,
+				8444D5BB24C039AD000D3B24 /* PathViewController.h */,
+				8444D5BC24C039AD000D3B24 /* PathViewController.m */,
+				8444D5BD24C039AD000D3B24 /* PathViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,6 +241,9 @@
 				845218F224BF03E20016C541 /* CharacterCollectionViewCell.h */,
 				845218F324BF03E20016C541 /* CharacterCollectionViewCell.m */,
 				845218F424BF03E20016C541 /* CharacterCollectionViewCell.xib */,
+				8444D5C524C05022000D3B24 /* RoomView.h */,
+				8444D5C624C05022000D3B24 /* RoomView.m */,
+				8444D5C324C03D21000D3B24 /* RoomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FFCE2E24B6C4960084AB5C /* BattleViewController.xib in Resources */,
+				8444D5C424C03D21000D3B24 /* RoomView.xib in Resources */,
 				8427564924B871B300C9782B /* EffectList.plist in Resources */,
 				8491114124B309A900E118B5 /* LaunchScreen.storyboard in Resources */,
 				8410B7BB24BC05AC00E50215 /* ProfessionList.plist in Resources */,
@@ -292,10 +317,12 @@
 				8427564324B81CBC00C9782B /* BuffList.plist in Resources */,
 				8427564124B8191C00C9782B /* SkillList.plist in Resources */,
 				84FFCE3424B7143F0084AB5C /* DescriptionView.xib in Resources */,
+				8444D5BF24C039AD000D3B24 /* PathViewController.xib in Resources */,
 				84A1D0F324BDAA3100C24F7D /* ProfessionTableViewCell.xib in Resources */,
 				8491113E24B309A900E118B5 /* Assets.xcassets in Resources */,
 				84A1D0EE24BD9EF200C24F7D /* ProfessionSelectViewController.xib in Resources */,
 				8491113C24B309A700E118B5 /* Main.storyboard in Resources */,
+				8444D5BA24C02DA5000D3B24 /* DestinationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +336,7 @@
 				84CDC23224B59B390092F377 /* CharacterSave.m in Sources */,
 				8404BCC524B4727200C99FB6 /* UserDefaults.m in Sources */,
 				84FFCE2D24B6C4960084AB5C /* BattleViewController.m in Sources */,
+				8444D5BE24C039AD000D3B24 /* PathViewController.m in Sources */,
 				8404BCB924B4184700C99FB6 /* CharacterAttributes.m in Sources */,
 				84A1D0ED24BD9EF200C24F7D /* ProfessionSelectViewController.m in Sources */,
 				8491113924B309A700E118B5 /* ViewController.m in Sources */,
@@ -317,6 +345,8 @@
 				84CDC23524B59F680092F377 /* Constant.m in Sources */,
 				84FFCE2324B6B6B90084AB5C /* CommonNavigationController.m in Sources */,
 				84FFCE3224B714300084AB5C /* DescriptionView.m in Sources */,
+				8444D5B924C02DA5000D3B24 /* DestinationViewController.m in Sources */,
+				8444D5C724C05022000D3B24 /* RoomView.m in Sources */,
 				8491113324B309A700E118B5 /* AppDelegate.m in Sources */,
 				8491114424B309A900E118B5 /* main.m in Sources */,
 				8404BCC224B4620E00C99FB6 /* ItemAttributes.m in Sources */,

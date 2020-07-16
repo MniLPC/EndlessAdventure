@@ -16,6 +16,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="characterFrame" translatesAutoresizingMaskIntoConstraints="NO" id="hQ8-a4-ycU">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New" translatesAutoresizingMaskIntoConstraints="NO" id="Dhs-bJ-ieJ">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                     </imageView>
@@ -40,10 +44,11 @@
                 <constraint firstAttribute="trailing" secondItem="mG6-er-TtA" secondAttribute="trailing" id="vtF-rs-kKS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
-            <point key="canvasLocation" x="132" y="137"/>
+            <point key="canvasLocation" x="131.8840579710145" y="136.60714285714286"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="New" width="73" height="73"/>
+        <image name="characterFrame" width="85" height="85"/>
     </resources>
 </document>
