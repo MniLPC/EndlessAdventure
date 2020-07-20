@@ -11,6 +11,7 @@
 #import "ProfessionSelectViewController.h"
 #import "MainTitleViewController.h"
 #import "CommonNavigationController.h"
+#import "PathViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -21,7 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
-    MainTitleViewController * bvc = [[MainTitleViewController alloc]initWithNibName:@"MainTitleViewController" bundle:nil];
+    PathViewController * bvc = [[PathViewController alloc]initWithNibName:@"PathViewController" bundle:nil];
     CommonNavigationController * navi = [[CommonNavigationController alloc]initWithRootViewController:bvc];
 
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

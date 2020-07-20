@@ -17,8 +17,11 @@
     // Drawing code
 }
 */
+
+
 - (void)setRoomWithEventIndex:(NSInteger)eventIndex EnvirIndex:(NSInteger)envirIndex{
-    
+    self.eventIndex = eventIndex;
+    self.effectIndex = envirIndex;
     switch (eventIndex) {
         case 0:
             {
@@ -48,6 +51,42 @@
         default:
             break;
     }
-    
+    switch (envirIndex) {
+        case 0:
+            {
+                self.EnvironmentName.text = @"Bless";
+                self.EnvironmentImageView.image = [UIImage imageNamed:@"effectIcon1"];
+            }
+            break;
+        case 1:
+        {
+                self.EnvironmentName.text = @"Burn";
+            self.EnvironmentImageView.image = [UIImage imageNamed:@"effectIcon2"];
+
+        }
+            break;
+        case 2:
+        {
+             self.EnvironmentName.text = @"strengthen";
+            self.EnvironmentImageView.image = [UIImage imageNamed:@"effectIcon3"];
+
+        }
+            break;
+        case 3:
+        {
+                         self.EnvironmentName.text = @"Narrow";
+            self.EnvironmentImageView.image = [UIImage imageNamed:@"effectIcon4"];
+
+        }
+            break;
+       
+        default:
+            {
+                       self.EnvironmentName.text = @"Sandstorm";
+                self.EnvironmentImageView.image = [UIImage imageNamed:@"effectIcon5"];
+
+                   }
+            break;
+    }
 }
 @end

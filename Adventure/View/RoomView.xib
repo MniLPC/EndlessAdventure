@@ -37,23 +37,30 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventIcon1" translatesAutoresizingMaskIntoConstraints="NO" id="84r-Wd-edL">
-                    <rect key="frame" x="0.0" y="12" width="55" height="50"/>
+                    <rect key="frame" x="8" y="12" width="45" height="45"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="4BP-QH-Uri"/>
-                        <constraint firstAttribute="width" constant="55" id="a49-A0-zhs"/>
+                        <constraint firstAttribute="height" constant="45" id="4BP-QH-Uri"/>
+                        <constraint firstAttribute="width" constant="45" id="a49-A0-zhs"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventIcon3" translatesAutoresizingMaskIntoConstraints="NO" id="X73-UF-ndS">
-                    <rect key="frame" x="55" y="12" width="55" height="50"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventIcon2" translatesAutoresizingMaskIntoConstraints="NO" id="X73-UF-ndS">
+                    <rect key="frame" x="57" y="12" width="45" height="45"/>
+                    <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="CgC-F4-Je8"/>
-                        <constraint firstAttribute="width" constant="55" id="rSR-Sr-Sbn"/>
+                        <constraint firstAttribute="height" constant="45" id="CgC-F4-Je8"/>
+                        <constraint firstAttribute="width" constant="45" id="rSR-Sr-Sbn"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVT-pB-NgW">
+                    <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="JUb-7R-lrq" firstAttribute="leading" secondItem="twQ-kP-u26" secondAttribute="leading" constant="1" id="4v3-wv-olO"/>
-                <constraint firstItem="84r-Wd-edL" firstAttribute="leading" secondItem="twQ-kP-u26" secondAttribute="leading" id="8fY-5R-T80"/>
+                <constraint firstItem="84r-Wd-edL" firstAttribute="leading" secondItem="twQ-kP-u26" secondAttribute="leading" constant="8" id="8fY-5R-T80"/>
+                <constraint firstItem="GVT-pB-NgW" firstAttribute="top" secondItem="xhp-Fr-Izr" secondAttribute="top" id="99w-XK-uRv"/>
+                <constraint firstItem="GVT-pB-NgW" firstAttribute="bottom" secondItem="twQ-kP-u26" secondAttribute="bottom" id="II8-QM-Pbt"/>
+                <constraint firstItem="GVT-pB-NgW" firstAttribute="leading" secondItem="twQ-kP-u26" secondAttribute="leading" id="QBr-EG-HtM"/>
                 <constraint firstItem="oDU-4p-HaZ" firstAttribute="leading" secondItem="twQ-kP-u26" secondAttribute="leading" id="RzN-Ql-ndQ"/>
                 <constraint firstItem="84r-Wd-edL" firstAttribute="top" secondItem="xhp-Fr-Izr" secondAttribute="top" constant="12" id="aKr-8I-LnE"/>
                 <constraint firstItem="Fv5-d2-RrX" firstAttribute="bottom" secondItem="twQ-kP-u26" secondAttribute="bottom" id="hUn-kg-ip4"/>
@@ -63,7 +70,8 @@
                 <constraint firstItem="twQ-kP-u26" firstAttribute="trailing" secondItem="Fv5-d2-RrX" secondAttribute="trailing" constant="1" id="rCE-RJ-NNe"/>
                 <constraint firstItem="oDU-4p-HaZ" firstAttribute="bottom" secondItem="twQ-kP-u26" secondAttribute="bottom" id="sNP-wI-JNj"/>
                 <constraint firstItem="oDU-4p-HaZ" firstAttribute="trailing" secondItem="twQ-kP-u26" secondAttribute="trailing" id="sy0-yA-l9P"/>
-                <constraint firstItem="twQ-kP-u26" firstAttribute="trailing" secondItem="X73-UF-ndS" secondAttribute="trailing" id="yZj-q0-u3t"/>
+                <constraint firstItem="twQ-kP-u26" firstAttribute="trailing" secondItem="GVT-pB-NgW" secondAttribute="trailing" id="xXJ-31-f8w"/>
+                <constraint firstItem="twQ-kP-u26" firstAttribute="trailing" secondItem="X73-UF-ndS" secondAttribute="trailing" constant="8" id="yZj-q0-u3t"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="twQ-kP-u26"/>
@@ -78,7 +86,7 @@
     </objects>
     <resources>
         <image name="bg_blue" width="256" height="256"/>
-        <image name="eventIcon1" width="250" height="250"/>
-        <image name="eventIcon3" width="256" height="256"/>
+        <image name="eventIcon1" width="256" height="256"/>
+        <image name="eventIcon2" width="256" height="256"/>
     </resources>
 </document>

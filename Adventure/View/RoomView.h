@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *eventName;
 @property (weak, nonatomic) IBOutlet UIImageView *EnvironmentImageView;
 @property (weak, nonatomic) IBOutlet UILabel *EnvironmentName;
-
+@property (nonatomic,assign) NSInteger eventIndex;
+@property (nonatomic,assign) NSInteger effectIndex;
 - (void)setRoomWithEventIndex:(NSInteger)eventIndex EnvirIndex:(NSInteger)envirIndex;
 @end
 

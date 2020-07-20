@@ -35,9 +35,7 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     CharacterCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    
-    
-    
+        
     
     return cell;
     
@@ -45,12 +43,10 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    
     if (indexPath.row == self.dataSource.count) {
         ProfessionSelectViewController * psvc = [[ProfessionSelectViewController alloc]initWithNibName:@"ProfessionSelectViewController" bundle:nil];
         [self.navigationController pushViewController:psvc animated:YES];
     }
-    
 }
 /*
 #pragma mark - Navigation
