@@ -38,6 +38,13 @@
 		84A1D0EE24BD9EF200C24F7D /* ProfessionSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A1D0EC24BD9EF200C24F7D /* ProfessionSelectViewController.xib */; };
 		84A1D0F224BDAA3100C24F7D /* ProfessionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1D0F024BDAA3100C24F7D /* ProfessionTableViewCell.m */; };
 		84A1D0F324BDAA3100C24F7D /* ProfessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A1D0F124BDAA3100C24F7D /* ProfessionTableViewCell.xib */; };
+		84BE956C24C6C8330046811A /* CharacterSkills.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE956B24C6C8330046811A /* CharacterSkills.m */; };
+		84BE957024C6D8C90046811A /* TreasureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE956E24C6D8C90046811A /* TreasureViewController.m */; };
+		84BE957124C6D8C90046811A /* TreasureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BE956F24C6D8C90046811A /* TreasureViewController.xib */; };
+		84BE957524C6DB560046811A /* NewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE957324C6DB560046811A /* NewItemViewController.m */; };
+		84BE957624C6DB560046811A /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BE957424C6DB560046811A /* NewItemViewController.xib */; };
+		84BE957A24C6F23E0046811A /* NewSkillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BE957824C6F23E0046811A /* NewSkillViewController.m */; };
+		84BE957B24C6F23E0046811A /* NewSkillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BE957924C6F23E0046811A /* NewSkillViewController.xib */; };
 		84CDC23224B59B390092F377 /* CharacterSave.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CDC23124B59B390092F377 /* CharacterSave.m */; };
 		84CDC23524B59F680092F377 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CDC23324B59F680092F377 /* Constant.m */; };
 		84FFCE2324B6B6B90084AB5C /* CommonNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FFCE2124B6B6B90084AB5C /* CommonNavigationController.m */; };
@@ -97,6 +104,17 @@
 		84A1D0EF24BDAA3100C24F7D /* ProfessionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfessionTableViewCell.h; sourceTree = "<group>"; };
 		84A1D0F024BDAA3100C24F7D /* ProfessionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfessionTableViewCell.m; sourceTree = "<group>"; };
 		84A1D0F124BDAA3100C24F7D /* ProfessionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfessionTableViewCell.xib; sourceTree = "<group>"; };
+		84BE956A24C6C8330046811A /* CharacterSkills.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterSkills.h; sourceTree = "<group>"; };
+		84BE956B24C6C8330046811A /* CharacterSkills.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterSkills.m; sourceTree = "<group>"; };
+		84BE956D24C6D8C90046811A /* TreasureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreasureViewController.h; sourceTree = "<group>"; };
+		84BE956E24C6D8C90046811A /* TreasureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreasureViewController.m; sourceTree = "<group>"; };
+		84BE956F24C6D8C90046811A /* TreasureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TreasureViewController.xib; sourceTree = "<group>"; };
+		84BE957224C6DB560046811A /* NewItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewItemViewController.h; sourceTree = "<group>"; };
+		84BE957324C6DB560046811A /* NewItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewItemViewController.m; sourceTree = "<group>"; };
+		84BE957424C6DB560046811A /* NewItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewItemViewController.xib; sourceTree = "<group>"; };
+		84BE957724C6F23E0046811A /* NewSkillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewSkillViewController.h; sourceTree = "<group>"; };
+		84BE957824C6F23E0046811A /* NewSkillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewSkillViewController.m; sourceTree = "<group>"; };
+		84BE957924C6F23E0046811A /* NewSkillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewSkillViewController.xib; sourceTree = "<group>"; };
 		84CDC23024B59B390092F377 /* CharacterSave.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterSave.h; sourceTree = "<group>"; };
 		84CDC23124B59B390092F377 /* CharacterSave.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterSave.m; sourceTree = "<group>"; };
 		84CDC23324B59F680092F377 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
@@ -188,9 +206,18 @@
 				84FFCE2A24B6C4960084AB5C /* BattleViewController.h */,
 				84FFCE2B24B6C4960084AB5C /* BattleViewController.m */,
 				84FFCE2C24B6C4960084AB5C /* BattleViewController.xib */,
+				84BE956D24C6D8C90046811A /* TreasureViewController.h */,
+				84BE956E24C6D8C90046811A /* TreasureViewController.m */,
+				84BE956F24C6D8C90046811A /* TreasureViewController.xib */,
+				84BE957224C6DB560046811A /* NewItemViewController.h */,
+				84BE957324C6DB560046811A /* NewItemViewController.m */,
+				84BE957424C6DB560046811A /* NewItemViewController.xib */,
 				845218E824BEEE300016C541 /* MainTitleViewController.h */,
 				845218E924BEEE300016C541 /* MainTitleViewController.m */,
 				845218EA24BEEE300016C541 /* MainTitleViewController.xib */,
+				84BE957724C6F23E0046811A /* NewSkillViewController.h */,
+				84BE957824C6F23E0046811A /* NewSkillViewController.m */,
+				84BE957924C6F23E0046811A /* NewSkillViewController.xib */,
 				84A1D0EA24BD9EF200C24F7D /* ProfessionSelectViewController.h */,
 				84A1D0EB24BD9EF200C24F7D /* ProfessionSelectViewController.m */,
 				84A1D0EC24BD9EF200C24F7D /* ProfessionSelectViewController.xib */,
@@ -215,6 +242,8 @@
 				8404BCC124B4620E00C99FB6 /* ItemAttributes.m */,
 				8404BCBD24B4617200C99FB6 /* CharacterItems.h */,
 				8404BCBE24B4617200C99FB6 /* CharacterItems.m */,
+				84BE956A24C6C8330046811A /* CharacterSkills.h */,
+				84BE956B24C6C8330046811A /* CharacterSkills.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +338,7 @@
 				8444D5C424C03D21000D3B24 /* RoomView.xib in Resources */,
 				8427564924B871B300C9782B /* EffectList.plist in Resources */,
 				8491114124B309A900E118B5 /* LaunchScreen.storyboard in Resources */,
+				84BE957B24C6F23E0046811A /* NewSkillViewController.xib in Resources */,
 				8410B7BB24BC05AC00E50215 /* ProfessionList.plist in Resources */,
 				845218F624BF03E20016C541 /* CharacterCollectionViewCell.xib in Resources */,
 				8427564524B81CC600C9782B /* DebuffList.plist in Resources */,
@@ -319,7 +349,9 @@
 				84FFCE3424B7143F0084AB5C /* DescriptionView.xib in Resources */,
 				8444D5BF24C039AD000D3B24 /* PathViewController.xib in Resources */,
 				84A1D0F324BDAA3100C24F7D /* ProfessionTableViewCell.xib in Resources */,
+				84BE957624C6DB560046811A /* NewItemViewController.xib in Resources */,
 				8491113E24B309A900E118B5 /* Assets.xcassets in Resources */,
+				84BE957124C6D8C90046811A /* TreasureViewController.xib in Resources */,
 				84A1D0EE24BD9EF200C24F7D /* ProfessionSelectViewController.xib in Resources */,
 				8491113C24B309A700E118B5 /* Main.storyboard in Resources */,
 				8444D5BA24C02DA5000D3B24 /* DestinationViewController.xib in Resources */,
@@ -337,18 +369,22 @@
 				8404BCC524B4727200C99FB6 /* UserDefaults.m in Sources */,
 				84FFCE2D24B6C4960084AB5C /* BattleViewController.m in Sources */,
 				8444D5BE24C039AD000D3B24 /* PathViewController.m in Sources */,
+				84BE957024C6D8C90046811A /* TreasureViewController.m in Sources */,
 				8404BCB924B4184700C99FB6 /* CharacterAttributes.m in Sources */,
+				84BE957A24C6F23E0046811A /* NewSkillViewController.m in Sources */,
 				84A1D0ED24BD9EF200C24F7D /* ProfessionSelectViewController.m in Sources */,
 				8491113924B309A700E118B5 /* ViewController.m in Sources */,
 				84FFCE2624B6B6BE0084AB5C /* CommonViewController.m in Sources */,
 				8404BCBF24B4617200C99FB6 /* CharacterItems.m in Sources */,
 				84CDC23524B59F680092F377 /* Constant.m in Sources */,
 				84FFCE2324B6B6B90084AB5C /* CommonNavigationController.m in Sources */,
+				84BE956C24C6C8330046811A /* CharacterSkills.m in Sources */,
 				84FFCE3224B714300084AB5C /* DescriptionView.m in Sources */,
 				8444D5B924C02DA5000D3B24 /* DestinationViewController.m in Sources */,
 				8444D5C724C05022000D3B24 /* RoomView.m in Sources */,
 				8491113324B309A700E118B5 /* AppDelegate.m in Sources */,
 				8491114424B309A900E118B5 /* main.m in Sources */,
+				84BE957524C6DB560046811A /* NewItemViewController.m in Sources */,
 				8404BCC224B4620E00C99FB6 /* ItemAttributes.m in Sources */,
 				8404BCBC24B4613B00C99FB6 /* AttributeCalculationTool.m in Sources */,
 				845218EB24BEEE300016C541 /* MainTitleViewController.m in Sources */,

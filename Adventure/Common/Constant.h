@@ -43,7 +43,6 @@ static inline CGFloat SafeAreaBottomHeight(void){
 static inline CGFloat SafeAreaTopHeight(void){
     return NotchPhone()? 22.0f : 0.f;
 }
-
 #define  kScaleWidth            (kScreenWidth/375.0)
 #define  kIsiPhoneX             NotchPhone()
 #define  kStatusBarHeight       StatusBarHeight()
@@ -78,6 +77,8 @@ static inline CGFloat SafeAreaTopHeight(void){
 #define StrongSelf(type) __strong __typeof__(type) strongSelf = type;
 /// @name 字体、颜色相关
 ///=============================================================================
+#define  KImageNamed(str) []
+
 #define FONT_SIZE(f)            [UIFont systemFontOfSize:(f)]
 #define FONT_BOLD_SIZE(f)       [UIFont boldSystemFontOfSize:(f)]
 #define FONT_ITALIC_SIZE(f)     [UIFont italicSystemFontOfSize:(f)]

@@ -67,7 +67,7 @@
             break;
         case 2:
         {
-             self.EnvironmentName.text = @"strengthen";
+             self.EnvironmentName.text = @"Strengthen";
             self.EnvironmentImageView.image = [UIImage imageNamed:@"effectIcon3"];
 
         }

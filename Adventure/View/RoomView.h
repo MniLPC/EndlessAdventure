@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *EnvironmentName;
 @property (nonatomic,assign) NSInteger eventIndex;
 @property (nonatomic,assign) NSInteger effectIndex;
+@property (weak, nonatomic) IBOutlet UIButton *clickButton;
 - (void)setRoomWithEventIndex:(NSInteger)eventIndex EnvirIndex:(NSInteger)envirIndex;
 @end
 

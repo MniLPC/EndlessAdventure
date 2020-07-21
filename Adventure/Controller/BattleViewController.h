@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BattleViewController : CommonViewController
-
+@property (nonatomic,strong) CharacterSave * save;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *enemyName;
 @property (weak, nonatomic) IBOutlet UIImageView *selfImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *enemyImageView;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *skillButtonsArray;
 
 @end
 
@@ -26,6 +27,47 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (self.save) {
+        self.selfImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"character_%ld",self.save.characterIndex.integerValue]];
+        
+        for (int i = 0; i<4; i++) {
+            switch (i) {
+                case 0:
+                    {
+                        UIButton * button = self.skillButtonsArray[i];
+                                   [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"skill%ld",self.save.characterSkills.skill1.integerValue]] forState:UIControlStateNormal];
+                    }
+                    break;
+                case 1:
+                    {
+                        UIButton * button = self.skillButtonsArray[i];
+                                   [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"skill%ld",self.save.characterSkills.skill2.integerValue]] forState:UIControlStateNormal];
+                    }
+                    break;
+                case 2:
+                    {
+                        UIButton * button = self.skillButtonsArray[i];
+                                   [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"skill%ld",self.save.characterSkills.skill3.integerValue]] forState:UIControlStateNormal];
+                    }
+                    break;
+                default:
+                {
+                    if (!self.save.characterSkills.skill4) {
+                        return;
+                    }
+                    UIButton * button = self.skillButtonsArray[i];
+                               [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"skill%ld",self.save.characterSkills.skill4.integerValue]] forState:UIControlStateNormal];
+                }
+                    break;
+            }
+           
+            
+        }
+      
+        
+        
+        
+    }
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)stateClick:(id)sender {

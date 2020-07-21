@@ -78,6 +78,7 @@
             <connections>
                 <outlet property="EnvironmentImageView" destination="X73-UF-ndS" id="6Nb-7k-FuZ"/>
                 <outlet property="EnvironmentName" destination="Fv5-d2-RrX" id="OzQ-zO-mKO"/>
+                <outlet property="clickButton" destination="GVT-pB-NgW" id="b6r-xL-msW"/>
                 <outlet property="eventImageView" destination="84r-Wd-edL" id="7d0-JT-Guu"/>
                 <outlet property="eventName" destination="JUb-7R-lrq" id="drr-Hs-bDj"/>
             </connections>
