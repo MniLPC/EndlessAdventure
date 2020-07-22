@@ -24,6 +24,8 @@
 		8444D5BF24C039AD000D3B24 /* PathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8444D5BD24C039AD000D3B24 /* PathViewController.xib */; };
 		8444D5C424C03D21000D3B24 /* RoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8444D5C324C03D21000D3B24 /* RoomView.xib */; };
 		8444D5C724C05022000D3B24 /* RoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8444D5C624C05022000D3B24 /* RoomView.m */; };
+		8447B69C24C8378800352B70 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8447B69A24C8378800352B70 /* EventViewController.m */; };
+		8447B69D24C8378800352B70 /* EventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8447B69B24C8378800352B70 /* EventViewController.xib */; };
 		845218EB24BEEE300016C541 /* MainTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845218E924BEEE300016C541 /* MainTitleViewController.m */; };
 		845218EC24BEEE300016C541 /* MainTitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845218EA24BEEE300016C541 /* MainTitleViewController.xib */; };
 		845218F524BF03E20016C541 /* CharacterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845218F324BF03E20016C541 /* CharacterCollectionViewCell.m */; };
@@ -82,6 +84,9 @@
 		8444D5C324C03D21000D3B24 /* RoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomView.xib; sourceTree = "<group>"; };
 		8444D5C524C05022000D3B24 /* RoomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoomView.h; sourceTree = "<group>"; };
 		8444D5C624C05022000D3B24 /* RoomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoomView.m; sourceTree = "<group>"; };
+		8447B69924C8378800352B70 /* EventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
+		8447B69A24C8378800352B70 /* EventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
+		8447B69B24C8378800352B70 /* EventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewController.xib; sourceTree = "<group>"; };
 		845218E824BEEE300016C541 /* MainTitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTitleViewController.h; sourceTree = "<group>"; };
 		845218E924BEEE300016C541 /* MainTitleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTitleViewController.m; sourceTree = "<group>"; };
 		845218EA24BEEE300016C541 /* MainTitleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTitleViewController.xib; sourceTree = "<group>"; };
@@ -209,6 +214,9 @@
 				84BE956D24C6D8C90046811A /* TreasureViewController.h */,
 				84BE956E24C6D8C90046811A /* TreasureViewController.m */,
 				84BE956F24C6D8C90046811A /* TreasureViewController.xib */,
+				8447B69924C8378800352B70 /* EventViewController.h */,
+				8447B69A24C8378800352B70 /* EventViewController.m */,
+				8447B69B24C8378800352B70 /* EventViewController.xib */,
 				84BE957224C6DB560046811A /* NewItemViewController.h */,
 				84BE957324C6DB560046811A /* NewItemViewController.m */,
 				84BE957424C6DB560046811A /* NewItemViewController.xib */,
@@ -349,6 +357,7 @@
 				84FFCE3424B7143F0084AB5C /* DescriptionView.xib in Resources */,
 				8444D5BF24C039AD000D3B24 /* PathViewController.xib in Resources */,
 				84A1D0F324BDAA3100C24F7D /* ProfessionTableViewCell.xib in Resources */,
+				8447B69D24C8378800352B70 /* EventViewController.xib in Resources */,
 				84BE957624C6DB560046811A /* NewItemViewController.xib in Resources */,
 				8491113E24B309A900E118B5 /* Assets.xcassets in Resources */,
 				84BE957124C6D8C90046811A /* TreasureViewController.xib in Resources */,
@@ -368,6 +377,7 @@
 				84CDC23224B59B390092F377 /* CharacterSave.m in Sources */,
 				8404BCC524B4727200C99FB6 /* UserDefaults.m in Sources */,
 				84FFCE2D24B6C4960084AB5C /* BattleViewController.m in Sources */,
+				8447B69C24C8378800352B70 /* EventViewController.m in Sources */,
 				8444D5BE24C039AD000D3B24 /* PathViewController.m in Sources */,
 				84BE957024C6D8C90046811A /* TreasureViewController.m in Sources */,
 				8404BCB924B4184700C99FB6 /* CharacterAttributes.m in Sources */,

@@ -36,7 +36,7 @@
     skills.skill1 = @(index*3);
     skills.skill2 = @(index*3+1);
     skills.skill3 = @(index*3+2);
-//    skills.skill4 = @(index*4+3);
+    
     CharacterAttributes * attributes = [CharacterAttributes new];
     CharacterItems * items = [CharacterItems new];
     switch (index) {

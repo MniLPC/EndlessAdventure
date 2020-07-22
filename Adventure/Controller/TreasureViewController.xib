@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TreasureViewController">
             <connections>
+                <outlet property="itemImageView" destination="VF6-fH-g3C" id="TNq-Dv-DRT"/>
+                <outlet property="lightImageView" destination="IWX-HF-Tg3" id="DCt-y1-sy9"/>
                 <outlet property="treasureImageView" destination="oxR-yN-pfe" id="XOX-Uw-khT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -41,22 +43,42 @@
                         <action selector="openClick:" destination="-1" eventType="touchUpInside" id="tC4-6v-3cM"/>
                     </connections>
                 </button>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light" translatesAutoresizingMaskIntoConstraints="NO" id="IWX-HF-Tg3">
+                    <rect key="frame" x="388" y="85" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="jbx-NP-f2s"/>
+                        <constraint firstAttribute="width" constant="120" id="rba-0e-YRo"/>
+                    </constraints>
+                </imageView>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weapon_DEX5" translatesAutoresizingMaskIntoConstraints="NO" id="VF6-fH-g3C">
+                    <rect key="frame" x="433" y="130" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="V0h-RP-On3"/>
+                        <constraint firstAttribute="width" constant="30" id="iI6-XH-MhF"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="86P-I6-XUC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5RR-Td-10o"/>
                 <constraint firstItem="oxR-yN-pfe" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.7" id="6BJ-lW-QMm"/>
+                <constraint firstItem="VF6-fH-g3C" firstAttribute="centerX" secondItem="oxR-yN-pfe" secondAttribute="centerX" id="9b3-oj-oAx"/>
                 <constraint firstItem="npb-rB-uen" firstAttribute="top" secondItem="86P-I6-XUC" secondAttribute="bottom" constant="10" id="I2A-8c-xys"/>
+                <constraint firstItem="VF6-fH-g3C" firstAttribute="centerY" secondItem="oxR-yN-pfe" secondAttribute="centerY" id="Ms3-fL-tvr"/>
                 <constraint firstItem="npb-rB-uen" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T3R-B9-7tk"/>
                 <constraint firstItem="oxR-yN-pfe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iXG-Ce-bWt"/>
+                <constraint firstItem="oxR-yN-pfe" firstAttribute="centerX" secondItem="IWX-HF-Tg3" secondAttribute="centerX" id="ma8-XU-evb"/>
                 <constraint firstItem="86P-I6-XUC" firstAttribute="top" secondItem="oxR-yN-pfe" secondAttribute="bottom" constant="10" id="pQt-dh-ppy"/>
+                <constraint firstItem="oxR-yN-pfe" firstAttribute="centerY" secondItem="IWX-HF-Tg3" secondAttribute="centerY" id="qnM-9o-YME"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="133" y="127"/>
+            <point key="canvasLocation" x="132.58928571428572" y="126.08695652173914"/>
         </view>
     </objects>
     <resources>
+        <image name="Weapon_DEX5" width="256" height="256"/>
         <image name="btn" width="146" height="41"/>
+        <image name="light" width="480" height="480"/>
         <image name="treasureClose" width="1116" height="1000"/>
     </resources>
 </document>

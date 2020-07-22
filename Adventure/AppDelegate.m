@@ -7,11 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import "BattleViewController.h"
+#import "TreasureViewController.h"
 #import "ProfessionSelectViewController.h"
 #import "MainTitleViewController.h"
 #import "CommonNavigationController.h"
 #import "PathViewController.h"
+#import "NewSkillViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -22,7 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
-    PathViewController * bvc = [[PathViewController alloc]initWithNibName:@"PathViewController" bundle:nil];
+    TreasureViewController * bvc = [[TreasureViewController alloc]initWithNibName:@"TreasureViewController" bundle:nil];
     CommonNavigationController * navi = [[CommonNavigationController alloc]initWithRootViewController:bvc];
 
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

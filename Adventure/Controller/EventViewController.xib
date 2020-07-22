@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wcb-XP-NwQ">
+                    <rect key="frame" x="37" y="20" width="220" height="220"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBl-dY-Ezg">
+                    <rect key="frame" x="286" y="20" width="335" height="220"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJu-df-UTn">
+                    <rect key="frame" x="173.5" y="300" width="120" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="h9U-ZG-VI1"/>
+                        <constraint firstAttribute="height" constant="35" id="jMi-13-jRA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
+                    <state key="normal" title="Accept" backgroundImage="btn">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEn-Du-MaY">
+                    <rect key="frame" x="373.5" y="300" width="120" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Qjm-DS-bDh"/>
+                        <constraint firstAttribute="width" constant="120" id="ey6-9s-4NL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
+                    <state key="normal" title="Leave" backgroundImage="btn">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wJu-df-UTn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.7" id="73X-ub-8o9"/>
+                <constraint firstItem="IEn-Du-MaY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.3" id="He1-sw-dyl"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="IEn-Du-MaY" secondAttribute="bottom" constant="40" id="U7S-Iw-p40"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="wJu-df-UTn" secondAttribute="bottom" constant="40" id="fLc-jF-KEq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="131.78410794602701" y="152.80000000000001"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn" width="146" height="41"/>
+    </resources>
+</document>

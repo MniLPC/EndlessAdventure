@@ -7,9 +7,11 @@
 //
 
 #import "TreasureViewController.h"
-
+#import "NewItemViewController.h"
 @interface TreasureViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *treasureImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *itemImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *lightImageView;
 
 @end
 
@@ -17,15 +19,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)openClick:(id)sender {
     UIButton * button = sender;
     button.enabled = NO;
     self.treasureImageView.image = [UIImage imageNamed:@"treasureOpen"];
-    
-    
-    
+    self.itemImageView.hidden = NO;
+    self.lightImageView.hidden = NO;
+    [UIView animateWithDuration:1.5 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        self.itemImageView.transform = CGAffineTransformMakeScale(4, 4);
+        self.lightImageView.transform = CGAffineTransformRotate(self.lightImageView.transform, M_PI_4);
+    } completion:^(BOOL finished) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    NewItemViewController * itemVC = [[NewItemViewController alloc]initWithNibName:@"NewItemViewController" bundle:nil];
+                 [self.navigationController pushViewController:itemVC animated:NO];
+        });
+
+    }];
+
+
     
 }
 

@@ -43,7 +43,6 @@ static CharacterAttributes *_instance = nil;
     [coder encodeObject:_Rest forKey:@"Rest"];
     [coder encodeObject:_Experience forKey:@"Experience"];
     [coder encodeObject:_Level forKey:@"Level"];
-  
 }
 
 @end
