@@ -10,6 +10,8 @@
 #import "RoomView.h"
 #import "BattleViewController.h"
 #import "CharacterSave.h"
+#import "TreasureViewController.h"
+#import "EventViewController.h"
 @interface PathViewController ()
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *currentSelectionView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *nextSelectionView;
@@ -31,7 +33,10 @@
 
 
 - (void)viewDidAppear:(BOOL)animated{
-    [self setUpRooms];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self setUpRooms];
+
+    });
 }
 - (void)setUpRooms{
     self.currentRoomArray = [NSMutableArray new];
@@ -47,42 +52,91 @@
         }
         NSLog(@"event:%d",randomEvent);
         int randomEffect = arc4random()%5;
-        
+        [self.view addSubview:roomView];
+
         [roomView setRoomWithEventIndex:randomEvent EnvirIndex:randomEffect];
         [self.currentRoomArray addObject:roomView];
         UIButton * locationButton = self.currentSelectionView[i];
         roomView.frame = locationButton.frame;
-        [self.view addSubview:roomView];
         roomView.tag = i;
         [roomView.clickButton addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
     }
-
     for (int i = 0; i<4; i++) {
-        RoomView * roomView = [[NSBundle mainBundle] loadNibNamed:@"RoomView" owner:nil options:nil].firstObject;
-        int randomEvent = arc4random()%8;
-        if (randomEvent<5) {
-            randomEvent =0;
-        }else{
-            randomEvent = randomEvent-3;
-        }
-        int randomEffect = arc4random()%5;
-        
-        [roomView setRoomWithEventIndex:randomEvent EnvirIndex:randomEffect];
-        [self.nextRoomArrray addObject:roomView];
-        UIButton * locationButton = self.nextSelectionView[i];
-        roomView.frame = locationButton.frame;
-        [self.view addSubview:roomView];
-    }
+                RoomView * roomView = [[NSBundle mainBundle] loadNibNamed:@"RoomView" owner:nil options:nil].firstObject;
+                int randomEvent = arc4random()%8;
+                if (randomEvent<5) {
+                    randomEvent =0;
+                }else{
+                    randomEvent = randomEvent-3;
+                }
+                int randomEffect = arc4random()%5;
+                [self.view addSubview:roomView];
+
+                [roomView setRoomWithEventIndex:randomEvent EnvirIndex:randomEffect];
+                [self.nextRoomArrray addObject:roomView];
+                UIButton * locationButton = self.nextSelectionView[i];
+                roomView.frame = locationButton.frame;
+            }
+
 }
 - (void)clickBtn:(UIButton*)sender{
     
-    
+
     RoomView * roomView = self.currentRoomArray[sender.tag];
+    [self ChangeViewWithIndex:roomView.eventIndex];
     
-    BattleViewController * bvc = [[BattleViewController alloc]initWithNibName:@"BattleViewController" bundle:nil];
-    bvc.save = self.save;
-    [self.navigationController pushViewController:bvc animated:YES];
+
+}
+
+- (void)ChangeViewWithIndex:(NSInteger)index{
     
+    switch (index) {
+        case 0:
+            {
+                BattleViewController * bvc = [[BattleViewController alloc]initWithNibName:@"BattleViewController" bundle:nil];
+                [self addChildViewController:bvc];
+                bvc.save = self.save;
+                bvc.view.frame = kScreeenBounds;
+                bvc.view.alpha = 0;
+                [self.view addSubview:bvc.view];
+                [bvc didMoveToParentViewController:self];
+                [UIView animateWithDuration:1.0 animations:^{
+                    bvc.view.alpha = 1;
+                }];
+            }
+            break;
+        case 1:
+        {
+            TreasureViewController * bvc = [[TreasureViewController alloc]initWithNibName:@"TreasureViewController" bundle:nil];
+            [self addChildViewController:bvc];
+            bvc.save = self.save;
+            bvc.view.frame = kScreeenBounds;
+            bvc.view.alpha = 0;
+            [self.view addSubview:bvc.view];
+            [bvc didMoveToParentViewController:self];
+            [UIView animateWithDuration:1.0 animations:^{
+                bvc.view.alpha = 1;
+            }];
+            
+        }
+            break;
+        case 2:
+        {
+            EventViewController * bvc = [[EventViewController alloc]initWithNibName:@"EventViewController" bundle:nil];
+            [self addChildViewController:bvc];
+            bvc.save = self.save;
+            bvc.view.frame = kScreeenBounds;
+            bvc.view.alpha = 0;
+            [self.view addSubview:bvc.view];
+            [bvc didMoveToParentViewController:self];
+            [UIView animateWithDuration:1.0 animations:^{
+                bvc.view.alpha = 1;
+            }];
+        }
+            break;
+        default:
+            break;
+    }
 }
 /*
 #pragma mark - Navigation

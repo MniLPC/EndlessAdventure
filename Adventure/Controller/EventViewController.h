@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EventViewController : CommonViewController
-
+@property (nonatomic,assign) NSInteger eventIndex;
+@property (nonatomic,assign) CharacterSave * save;
 @end
 
 NS_ASSUME_NONNULL_END

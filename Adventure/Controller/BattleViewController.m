@@ -75,6 +75,12 @@
     
 }
 - (IBAction)settingClick:(id)sender {
+    [UIView animateWithDuration:1.0 animations:^{
+        self.view.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self.view removeFromSuperview];
+        [self removeFromParentViewController];
+    }];
 }
 - (IBAction)skillClick:(UIButton *)sender {
 }

@@ -7,11 +7,10 @@
 //
 
 #import "CommonViewController.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TreasureViewController : CommonViewController
-
+@property (nonatomic,strong) CharacterSave * save;
 @end
 
 NS_ASSUME_NONNULL_END
