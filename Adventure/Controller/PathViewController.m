@@ -28,11 +28,21 @@
     NSInteger random = arc4random()%8 ;
     self.save = [CharacterSave newSaveWithIndex:random];
     self.heroImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"character_%ld",random]];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:@"actionDone" object:nil];
     // Do any additional setup after loading the view from its nib.
 }
+- (void)refresh{
+    NSLog(@"%@",self.save.characterAttributes.MaxHp);
 
+    
+    
+    
+}
 
 - (void)viewDidAppear:(BOOL)animated{
+    
+    NSLog(@"%@",self.save.characterAttributes.MaxHp);
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self setUpRooms];
 
@@ -58,7 +68,8 @@
         [self.currentRoomArray addObject:roomView];
         UIButton * locationButton = self.currentSelectionView[i];
         roomView.frame = locationButton.frame;
-        roomView.tag = i;
+        roomView.clickButton.tag = i;
+    
         [roomView.clickButton addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
     }
     for (int i = 0; i<4; i++) {

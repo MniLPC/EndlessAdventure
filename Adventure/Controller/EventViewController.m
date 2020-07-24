@@ -49,21 +49,25 @@
     switch (index) {
         case 0:
                 [ToastView showToastWithText:@"You are poisoned."];
+            self.save.PoisonedTurn = @3;
             break;
         case 1:
         {
                 [ToastView showToastWithText:@"You feel full of power. Hp is restored."];
+            self.save.characterAttributes.HP = self.save.characterAttributes.MaxHp;
+            
         }
             break;
         case 2:
         {
-                [ToastView showToastWithText:@"You feel full of power and all attributes are improved."];
-            
+            [ToastView showToastWithText:@"You feel full of power and all attributes are improved."];
+            self.save.characterAttributes.MaxHp = @(self.save.characterAttributes.MaxHp.integerValue +5);
         }
             break;
         case 3:
         {
                  [ToastView showToastWithText:@"You're cursed. Max HP -5."];
+            self.save.characterAttributes.MaxHp = @(self.save.characterAttributes.MaxHp.integerValue -5);
         }
             break;
         default:
@@ -73,7 +77,11 @@
             break;
     }
     
-
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"actionDone" object:nil];
+        [self removeFromParentViewController];
+        [self.view removeFromSuperview];
+    });
     
 }
 
