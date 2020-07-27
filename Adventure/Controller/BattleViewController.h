@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BattleViewController : CommonViewController
 @property (nonatomic,strong) CharacterSave * save;
+@property (nonatomic,assign) BOOL isBoss;
 @end
 
 NS_ASSUME_NONNULL_END

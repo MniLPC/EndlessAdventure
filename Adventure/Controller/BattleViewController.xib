@@ -24,6 +24,10 @@
                 <outletCollection property="skillButtonsArray" destination="hig-EJ-IUz" id="Bcm-M2-Ohe"/>
                 <outletCollection property="skillButtonsArray" destination="LnS-3C-B5g" id="Lzs-OD-9dY"/>
                 <outletCollection property="skillButtonsArray" destination="JyX-9f-OH6" id="6Bi-Pm-bg6"/>
+                <outletCollection property="skillNameLabels" destination="khd-dk-DyV" id="K8M-fY-pcz"/>
+                <outletCollection property="skillNameLabels" destination="J9F-lc-Znz" id="KIh-qq-IZ3"/>
+                <outletCollection property="skillNameLabels" destination="rm7-nr-rZI" id="5AU-hF-n0S"/>
+                <outletCollection property="skillNameLabels" destination="5Gx-jK-cyR" id="UbV-Ty-Gei"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -59,7 +63,7 @@
                         <constraint firstAttribute="height" constant="50" id="s6b-KE-4WW"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="36"/>
-                    <state key="normal" title="1" backgroundImage="skill1">
+                    <state key="normal" backgroundImage="skill1">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -73,7 +77,7 @@
                         <constraint firstAttribute="width" constant="50" id="Iu1-bj-Jb4"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="36"/>
-                    <state key="normal" title="1" backgroundImage="skill1">
+                    <state key="normal" backgroundImage="skill1">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -87,7 +91,7 @@
                         <constraint firstAttribute="width" constant="50" id="j1y-gf-sNE"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="36"/>
-                    <state key="normal" title="1" backgroundImage="skill1">
+                    <state key="normal" backgroundImage="skill1">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -101,7 +105,7 @@
                         <constraint firstAttribute="width" constant="50" id="u8P-VE-Nfq"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="36"/>
-                    <state key="normal" title="1" backgroundImage="bg_purple">
+                    <state key="normal" backgroundImage="bg_purple">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -203,21 +207,21 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17o-oX-lW8">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17o-oX-lW8">
                     <rect key="frame" x="597" y="292" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="0bt-LS-KOi"/>
                         <constraint firstAttribute="height" constant="50" id="qQM-YW-a6R"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="36"/>
-                    <state key="normal" title="1" backgroundImage="skill1">
+                    <state key="normal" backgroundImage="runaway">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="runawayClick:" destination="-1" eventType="touchUpInside" id="fO7-fe-fz1"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJs-Rs-WfR">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Runaway" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJs-Rs-WfR">
                     <rect key="frame" x="589.5" y="345" width="65" height="27"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="65" id="8pV-hb-g15"/>
@@ -353,6 +357,7 @@
         <image name="bg_purple" width="256" height="256"/>
         <image name="chaos" width="256" height="256"/>
         <image name="character_1" width="909" height="1000"/>
+        <image name="runaway" width="256" height="256"/>
         <image name="setting" width="100" height="100"/>
         <image name="skill1" width="256" height="256"/>
         <image name="stateFrame" width="939" height="244"/>
