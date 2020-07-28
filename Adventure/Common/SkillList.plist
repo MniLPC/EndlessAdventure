@@ -22,9 +22,9 @@
 		<key>name</key>
 		<string>Tornado Slash</string>
 		<key>description</key>
-		<string>A powerful attack.Based on STR. power 800</string>
+		<string>A powerful attack.Based on STR. power 400</string>
 		<key>power</key>
-		<string>800</string>
+		<string>400</string>
 		<key>buff</key>
 		<integer>0</integer>
 		<key>debuff</key>
@@ -220,7 +220,7 @@
 		<key>power</key>
 		<string>0</string>
 		<key>buff</key>
-		<integer>0</integer>
+		<integer>8</integer>
 		<key>debuff</key>
 		<integer>0</integer>
 		<key>base</key>
@@ -234,7 +234,7 @@
 		<key>description</key>
 		<string>The more you lose your HP, the more poewrful your attack is.</string>
 		<key>power</key>
-		<string>30</string>
+		<string>120</string>
 		<key>buff</key>
 		<integer>0</integer>
 		<key>debuff</key>
@@ -285,7 +285,7 @@ Not use turn Costs around 17% of your max HP</string>
 		<key>power</key>
 		<string>0</string>
 		<key>buff</key>
-		<integer>7</integer>
+		<integer>5</integer>
 		<key>debuff</key>
 		<integer>0</integer>
 		<key>base</key>
@@ -345,7 +345,7 @@ Not use turn Costs around 17% of your max HP</string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Struggle</string>
+		<string>Power Punch</string>
 		<key>description</key>
 		<string>Attack an enemy. Based on Level.  Power100</string>
 		<key>power</key>
@@ -357,7 +357,7 @@ Not use turn Costs around 17% of your max HP</string>
 		<key>base</key>
 		<string>STR</string>
 		<key>cooldown</key>
-		<string>5</string>
+		<string>0</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -367,7 +367,7 @@ Not use turn Costs around 17% of your max HP</string>
 		<key>power</key>
 		<string>30</string>
 		<key>buff</key>
-		<integer>0</integer>
+		<integer>7</integer>
 		<key>debuff</key>
 		<integer>0</integer>
 		<key>base</key>
@@ -383,7 +383,7 @@ Not use turn Costs around 17% of your max HP</string>
 		<key>power</key>
 		<string>0</string>
 		<key>buff</key>
-		<integer>0</integer>
+		<integer>5</integer>
 		<key>debuff</key>
 		<integer>0</integer>
 		<key>base</key>
@@ -413,7 +413,7 @@ Not use turn Costs around 17% of your max HP</string>
 		<key>description</key>
 		<string>Add Damage over time on an enemy. Based on INT, Power60x3Turn</string>
 		<key>power</key>
-		<string>0</string>
+		<string>30</string>
 		<key>buff</key>
 		<integer>0</integer>
 		<key>debuff</key>

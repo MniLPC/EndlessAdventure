@@ -6,7 +6,8 @@
 	<string>Avoid stat +65%</string>
 	<string>Reduce 1 cooldown </string>
 	<string>Create shield</string>
-	<string>Gain great power in next turn.</string>
+	<string>Great power</string>
 	<string>Healing</string>
+	<string>Reflect</string>
 </array>
 </plist>

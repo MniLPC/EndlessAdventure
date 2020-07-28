@@ -11,11 +11,13 @@
             <connections>
                 <outlet property="characterHpConstraint" destination="CPy-yd-MQB" id="Y8r-bA-RUr"/>
                 <outlet property="characterTextCenterView" destination="Q5E-MP-TmS" id="jki-6q-R5h"/>
+                <outlet property="enemyHpBar" destination="zpY-xc-XKB" id="Vav-pq-Ndz"/>
                 <outlet property="enemyHpConstraint" destination="74J-69-Ptb" id="JGv-RM-bu7"/>
                 <outlet property="enemyImageView" destination="mmH-tz-fpp" id="yyp-Im-wHU"/>
                 <outlet property="enemyLevelLabel" destination="LPI-Dq-M6f" id="tAk-N7-4mJ"/>
                 <outlet property="enemyName" destination="rrW-Jo-bNc" id="XJd-U7-TRv"/>
                 <outlet property="enemyTextCenterView" destination="kVB-YZ-aXN" id="2UK-Jo-Ozw"/>
+                <outlet property="selfHpBar" destination="x33-T8-H6z" id="RPT-eB-i27"/>
                 <outlet property="selfImageView" destination="sUC-uG-E3k" id="KDn-Rx-UsD"/>
                 <outlet property="selfLevelLabel" destination="Op3-Hh-dqP" id="R5e-YM-4Ld"/>
                 <outlet property="selfName" destination="P27-53-QZU" id="Zmo-zM-SFH"/>
