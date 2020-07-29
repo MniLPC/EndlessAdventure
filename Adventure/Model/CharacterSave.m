@@ -16,7 +16,7 @@
         self.characterItems = [coder decodeObjectForKey:@"characterItems"];
         self.characterSkills = [coder decodeObjectForKey:@"characterSkills"];
         self.characterIndex = [coder decodeObjectForKey:@"characterIndex"];
-
+        self.floor = [coder decodeObjectForKey:@"floor"];
     }
     return self;
 }
@@ -26,12 +26,14 @@
     [coder encodeObject:_characterItems forKey:@"characterItems"];
     [coder encodeObject:_characterSkills forKey:@"characterSkills"];
     [coder encodeObject:_characterIndex forKey:@"characterIndex"];
+    [coder encodeObject:_floor forKey:@"floor"];
+
 }
 
 + (CharacterSave*)newSaveWithIndex:(NSInteger)index{
     
     CharacterSave * save = [[CharacterSave alloc]init];
-    
+    save.floor = @1;
     CharacterSkills * skills = [CharacterSkills new];
     skills.skill1 = @(index*3);
     skills.skill2 = @(index*3+1);

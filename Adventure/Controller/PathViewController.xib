@@ -9,7 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PathViewController">
             <connections>
+                <outlet property="LevelLabel" destination="MM1-hV-NIY" id="MX5-fD-c32"/>
                 <outlet property="heroImageView" destination="ADL-L2-WKg" id="99E-ZB-fpr"/>
+                <outlet property="hpLabel" destination="hfK-1x-o6q" id="cfQ-zy-z5C"/>
+                <outlet property="hpWidthConstraint" destination="ecG-yy-aky" id="5DY-kH-eCc"/>
+                <outlet property="nameLabel" destination="6Bb-a7-F44" id="qDm-6K-dJY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="currentSelectionView" destination="UNC-dO-QWx" id="VBz-uN-k4J"/>
                 <outletCollection property="currentSelectionView" destination="qOU-1M-MPy" id="yxG-75-GFj"/>
@@ -121,6 +125,12 @@
                     </constraints>
                     <state key="normal" backgroundImage="return"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfK-1x-o6q">
+                    <rect key="frame" x="213" y="338" width="62" height="19"/>
+                    <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -136,12 +146,14 @@
                 <constraint firstItem="MmU-iR-5Op" firstAttribute="centerX" secondItem="qOU-1M-MPy" secondAttribute="centerX" id="Y4D-Om-tSP"/>
                 <constraint firstItem="nd0-X8-Pjc" firstAttribute="leading" secondItem="ADL-L2-WKg" secondAttribute="trailing" constant="8" id="ZuI-wR-YJV"/>
                 <constraint firstItem="6Bb-a7-F44" firstAttribute="leading" secondItem="MM1-hV-NIY" secondAttribute="trailing" constant="13" id="a2b-3n-c7b"/>
+                <constraint firstItem="hfK-1x-o6q" firstAttribute="top" secondItem="nd0-X8-Pjc" secondAttribute="bottom" constant="-30" id="b5t-VV-nn8"/>
                 <constraint firstItem="qOU-1M-MPy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.4" id="cYN-Od-awo"/>
                 <constraint firstItem="FKJ-Sp-V7W" firstAttribute="top" secondItem="UNC-dO-QWx" secondAttribute="bottom" id="eAz-hX-CV2"/>
                 <constraint firstItem="nd0-X8-Pjc" firstAttribute="leading" secondItem="ND1-Zx-Y9k" secondAttribute="trailing" constant="-216" id="eHr-OC-m5c"/>
                 <constraint firstItem="nd0-X8-Pjc" firstAttribute="top" secondItem="MM1-hV-NIY" secondAttribute="bottom" constant="-33" id="gGZ-Eu-ofr"/>
                 <constraint firstItem="UNC-dO-QWx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.15" id="hlC-e9-G20"/>
                 <constraint firstItem="vA5-WV-2Sn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.2" id="k5F-sg-Ppf"/>
+                <constraint firstItem="hfK-1x-o6q" firstAttribute="leading" secondItem="nd0-X8-Pjc" secondAttribute="trailing" constant="-151" id="k6J-sY-0B5"/>
                 <constraint firstItem="qOU-1M-MPy" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.15" id="l3p-Wp-p2F"/>
                 <constraint firstItem="UVB-NS-kkX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.45" id="nml-Wr-VfI"/>
                 <constraint firstItem="ADL-L2-WKg" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="pqa-vf-rbk"/>

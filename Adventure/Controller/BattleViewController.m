@@ -22,9 +22,16 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *skillButtonsArray;
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *skillNameLabels;
 @property (nonatomic,strong) NSMutableArray * buffListArray;
+@property (nonatomic,strong) NSMutableArray * enemyBuffListArray;
 @property (weak, nonatomic) IBOutlet UIImageView *selfHpBar;
 @property (weak, nonatomic) IBOutlet UIImageView *enemyHpBar;
-
+@property (nonatomic,assign) NSInteger enemyPoisonedTurn;
+@property (nonatomic,assign) NSInteger selfPoisonedTurn;
+@property (nonatomic,assign) NSInteger enemyLevel;
+@property (nonatomic,assign) NSInteger enemyHp;
+@property (nonatomic,assign) NSInteger enemyMaxHp;
+@property (weak, nonatomic) IBOutlet UILabel *enemyHpLabel;
+@property (weak, nonatomic) IBOutlet UILabel *selfHpLabel;
 @end
 
 @implementation BattleViewController
@@ -32,6 +39,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.buffListArray = [NSMutableArray new];
+    self.enemyBuffListArray = [NSMutableArray new];
+    self.enemyLevel = self.save.floor.integerValue;
+    self.enemyLevelLabel.text = [NSString stringWithFormat:@"Lv%ld",self.enemyLevel];
+    self.selfLevelLabel.text = [NSString stringWithFormat:@"Lv%ld",self.save.characterAttributes.Level.integerValue];
+    NSInteger random = arc4random()%20;
+    self.enemyMaxHp = (self.enemyLevel/10.0+1)*80+random;
+    self.enemyHp = self.enemyMaxHp;
+    self.enemyHpLabel.text = [NSString stringWithFormat:@"%.0ld/%.0ld",(long)self.enemyMaxHp,(long)self.enemyMaxHp];
+    self.selfHpLabel.text = [NSString stringWithFormat:@"%ld/%ld",self.save.characterAttributes.HP.integerValue,self.save.characterAttributes.MaxHp.integerValue];
+    
+    NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"ProfessionList"ofType:@"plist"];
+
+         NSArray * professionArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
+    NSDictionary * professionDict = professionArray[self.save.characterIndex.integerValue];
+    self.selfName.text = professionDict[@"name"];
     
     if (!self.isBoss) {
         
@@ -161,7 +183,6 @@
     }];
 }
 - (IBAction)skillClick:(UIButton *)sender {
-    [self updateCooldown];
 
     switch (sender.tag) {
         case 0:
@@ -180,8 +201,8 @@
                 btn.enabled = NO;
 
             }
-            [self castSkill:professionDict];
-            
+            [self castSkill:professionDict targetImageView:self.enemyImageView];
+
         }
             break;
         case 1:
@@ -198,8 +219,8 @@
                 btn.enabled = NO;
             }
             
-            [self castSkill:professionDict];
-            
+            [self castSkill:professionDict targetImageView:self.enemyImageView];
+
             
         }
             
@@ -220,7 +241,7 @@
                 btn.enabled = NO;
 
             }
-            [self castSkill:professionDict];
+            [self castSkill:professionDict targetImageView:self.enemyImageView];
         }
             break;
         default:
@@ -239,65 +260,196 @@
 
             }
             
-            [self castSkill:professionDict];
+            [self castSkill:professionDict targetImageView:self.enemyImageView];
             
         }
             break;
     }
     
-    int count = 0;
-    for (UIButton * btn in self.skillButtonsArray) {
-        if (!btn.enabled) {
-            NSLog(@"%ld",btn.tag);
-            count++;
-        }
-    }
-    if (count == 4) {
+
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self enemyAction];
-        [self updateCooldown];
-    }
-    
+        int count = 0;
+        
+        for (UIButton * btn in self.skillButtonsArray) {
+
+            if (!btn.enabled) {
+                NSLog(@"%ld",btn.tag);
+                count++;
+            }
+        }
+        if (count == 4) {
+            [self updateCooldown];
+        }
+    });
 }
-- (void)castSkill:(NSDictionary*)dict{
+
+- (void)castSkill:(NSDictionary*)dict targetImageView:(UIImageView*)targetView{
+    
+
+    NSMutableArray * bufflistArray;
+    NSMutableArray * targetBuffListArray;
+    UIImageView * selfImageView;
+    if (targetView == self.enemyImageView) {
+        selfImageView = self.selfImageView;
+        [self updateCooldown];
+        bufflistArray = self.buffListArray;
+        targetBuffListArray = self.enemyBuffListArray;
+    }else{
+        selfImageView = self.enemyImageView;
+        bufflistArray = self.enemyBuffListArray;
+        targetBuffListArray = self.buffListArray;
+    }
     
     NSNumber * power =  dict[@"power"];
     NSString * base = dict[@"base"];
     NSNumber * buff = dict[@"buff"];
+    NSNumber * debuff = dict[@"debuff"];
+    if (debuff.integerValue) {
+        NSInteger randomNum = arc4random()%100;
+                       if (randomNum<25-self.save.characterAttributes.DEX.integerValue/50.0) {
+                           UILabel * dmgLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
+                           [self.view addSubview:dmgLabel];
+                           dmgLabel.font = [UIFont fontWithName:@"Palatino" size:20];
+                           dmgLabel.textColor = [UIColor redColor];
+                           dmgLabel.center = CGPointMake(targetView.center.x, targetView.center.y+50);
+                           dmgLabel.text = @"Resist";
+                           dmgLabel.textAlignment = NSTextAlignmentCenter;
+                           [UIView animateWithDuration:2 animations:^{
+                               dmgLabel.center = CGPointMake(targetView.center.x, targetView.center.y-100);
+                           } completion:^(BOOL finished) {
+                               [dmgLabel removeFromSuperview];
+                           }];
+                       }else{
+                           if (targetView == self.enemyImageView) {
+                               [self enemyShake];
+                               self.enemyPoisonedTurn = 3;
+                               self.enemyHpBar.layer.borderWidth =1;
+                               self.enemyHpBar.layer.borderColor = [UIColor greenColor].CGColor;
+                           }else{
+                               [self selfShake];
+                               self.selfPoisonedTurn = 3;
+                               self.selfHpBar.layer.borderWidth =1;
+                               self.selfHpBar.layer.borderColor = [UIColor greenColor].CGColor;
+                           }
+                        
+                           UILabel * dmgLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
+                           [self.view addSubview:dmgLabel];
+                           dmgLabel.font = [UIFont fontWithName:@"Palatino" size:20];
+                           dmgLabel.textColor = [UIColor redColor];
+                           dmgLabel.center = CGPointMake(targetView.center.x, targetView.center.y+50);
+                           dmgLabel.text = [NSString stringWithFormat:@"Poisoned"];
+                           dmgLabel.textAlignment = NSTextAlignmentCenter;
+                           [UIView animateWithDuration:2 animations:^{
+                               dmgLabel.center = CGPointMake(targetView.center.x, targetView.center.y-100);
+                           } completion:^(BOOL finished) {
+                               [dmgLabel removeFromSuperview];
+                           }];
+                           
+                       }
+        return;
+    }
     if (buff) {
         switch (buff.intValue) {
             case 0:
             {
                 NSInteger randomNum = arc4random()%100;
-                if (randomNum<25-self.save.characterAttributes.DEX.integerValue/50.0) {
+                NSInteger avoid = 25;
+                if ([bufflistArray containsObject:@2]) {
+                    avoid = 80;
+                    [bufflistArray removeObject:@2];
+                }
+                if (randomNum<avoid-self.save.characterAttributes.DEX.integerValue/50.0) {
                     UILabel * dmgLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
                     [self.view addSubview:dmgLabel];
                     dmgLabel.font = [UIFont fontWithName:@"Palatino" size:20];
                     dmgLabel.textColor = [UIColor redColor];
-                    dmgLabel.center = CGPointMake(self.enemyImageView.center.x, self.enemyImageView.center.y+50);
+                    dmgLabel.center = CGPointMake(targetView.center.x, targetView.center.y+50);
                     dmgLabel.text = @"Miss";
                     dmgLabel.textAlignment = NSTextAlignmentCenter;
                     [UIView animateWithDuration:2 animations:^{
-                        dmgLabel.center = CGPointMake(self.enemyImageView.center.x, self.enemyImageView.center.y-100);
+                        dmgLabel.center = CGPointMake(targetView.center.x, targetView.center.y-100);
                     } completion:^(BOOL finished) {
                         [dmgLabel removeFromSuperview];
                     }];
                 }else{
-                    [self enemyShake];
-                    NSNumber * baseValue = [self.save.characterAttributes valueForKey:base];
-                    NSInteger powerValue = power.integerValue * (1+baseValue.integerValue/100.0);
+                    NSNumber * baseValue;
+                    NSInteger powerValue = 0;
+                    if (targetView == self.enemyImageView) {
+                        baseValue = [self.save.characterAttributes valueForKey:base];
+                        powerValue = power.integerValue * (1+baseValue.integerValue/100.0);
+                        [self enemyShake];
+                    }else{
+                        powerValue = power.integerValue * (1+self.enemyLevel/10);
+                        [self selfShake];
+                    }
+                    
+                  
+                    
+                    
                     NSInteger damage = powerValue*0.3;
+                    if ([targetBuffListArray containsObject:@1]) {
+                       damage= damage*0.5;
+                        [targetBuffListArray removeObject:@1];
+                    }
+                    
+                    if ([targetBuffListArray containsObject:@4]) {
+                        damage = 0;
+                        [targetBuffListArray removeObject:@4];
+                    }
+                    if ([bufflistArray containsObject:@5]) {
+                        damage = damage*2;
+                        [bufflistArray removeObject:@5];
+                    }
+                    
                     UILabel * dmgLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
                     [self.view addSubview:dmgLabel];
                     dmgLabel.font = [UIFont fontWithName:@"Palatino" size:20];
                     dmgLabel.textColor = [UIColor redColor];
-                    dmgLabel.center = CGPointMake(self.enemyImageView.center.x, self.enemyImageView.center.y+50);
-                    dmgLabel.text = [NSString stringWithFormat:@"%@-%ld",dict[@"name"],damage];
+                    dmgLabel.center = CGPointMake(targetView.center.x, targetView.center.y+50);
+                    dmgLabel.text = [NSString stringWithFormat:@"%@: -%ld",dict[@"name"],damage];
                     dmgLabel.textAlignment = NSTextAlignmentCenter;
                     [UIView animateWithDuration:2 animations:^{
-                        dmgLabel.center = CGPointMake(self.enemyImageView.center.x, self.enemyImageView.center.y-100);
+                        dmgLabel.center = CGPointMake(targetView.center.x, targetView.center.y-100);
                     } completion:^(BOOL finished) {
                         [dmgLabel removeFromSuperview];
                     }];
+                    
+                    if (targetView == self.enemyImageView) {
+                        self.enemyHp -= damage;
+                        self.enemyHpLabel.text = [NSString stringWithFormat:@"%ld/%ld",self.enemyHp,self.enemyMaxHp];
+                        self.enemyHpConstraint.constant = 200 * (self.enemyHp*1.0001/self.enemyMaxHp);
+                        if (self.enemyHpConstraint.constant<=0) {
+                            NSLog(@"enemyDead");
+                            
+                            NSInteger random = arc4random()%100;
+                            if (random<7) {
+                                [[NSNotificationCenter defaultCenter] postNotificationName:@"NewItem" object:nil];
+                            }else if (random<14){
+                                [[NSNotificationCenter defaultCenter] postNotificationName:@"NewSkill" object:nil];
+                            }
+                            [UIView animateWithDuration:1.0 animations:^{
+                                self.view.alpha = 0;
+                            } completion:^(BOOL finished) {
+                                [self.view removeFromSuperview];
+                                [self removeFromParentViewController];
+                            }];
+                        }
+                    }else{
+                        
+                        
+                        self.save.characterAttributes.HP = @(self.save.characterAttributes.HP.integerValue-damage);
+                                              
+                        self.characterHpConstraint.constant = 200*(self.save.characterAttributes.HP.floatValue/self.save.characterAttributes.MaxHp.floatValue);
+                        self.selfHpLabel.text = [NSString stringWithFormat:@"%@/%@",self.save.characterAttributes.HP,self.save.characterAttributes.MaxHp];
+                        if (self.save.characterAttributes.HP.integerValue<=0) {
+                            NSLog(@"selfDead");
+                        }
+                        
+                        
+                        
+                    }
                     
                 }
             }
@@ -313,11 +465,11 @@
                 [self.view addSubview:dmgLabel];
                 dmgLabel.font = [UIFont fontWithName:@"Palatino" size:20];
                 dmgLabel.textColor = [UIColor yellowColor];
-                dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y+50);
+                dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y+50);
                 dmgLabel.text = BuffDes;
                 dmgLabel.textAlignment = NSTextAlignmentCenter;
                 [UIView animateWithDuration:2 animations:^{
-                    dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y-100);
+                    dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y-100);
                 } completion:^(BOOL finished) {
                     [dmgLabel removeFromSuperview];
                 }];
@@ -335,11 +487,11 @@
                 [self.view addSubview:dmgLabel];
                 dmgLabel.font = [UIFont fontWithName:@"Palatino" size:20];
                 dmgLabel.textColor = [UIColor yellowColor];
-                dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y+50);
+                dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y+50);
                 dmgLabel.text = BuffDes;
                 dmgLabel.textAlignment = NSTextAlignmentCenter;
                 [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                    dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y-100);
+                    dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y-100);
                     
                 } completion:^(BOOL finished) {
                     [dmgLabel removeFromSuperview];
@@ -359,11 +511,11 @@
                 [self.view addSubview:dmgLabel];
                 dmgLabel.font = [UIFont fontWithName:@"Palatino" size:20];
                 dmgLabel.textColor = [UIColor yellowColor];
-                dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y+50);
+                dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y+50);
                 dmgLabel.text = BuffDes;
                 dmgLabel.textAlignment = NSTextAlignmentCenter;
                 [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                    dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y-100);
+                    dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y-100);
                 } completion:^(BOOL finished) {
                     [dmgLabel removeFromSuperview];
                 }];
@@ -382,11 +534,11 @@
                 [self.view addSubview:dmgLabel];
                 dmgLabel.font = [UIFont fontWithName:@"Palatino" size:20];
                 dmgLabel.textColor = [UIColor yellowColor];
-                dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y+50);
+                dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y+50);
                 dmgLabel.text = BuffDes;
                 dmgLabel.textAlignment = NSTextAlignmentCenter;
                 [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                    dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y-100);
+                    dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y-100);
                 } completion:^(BOOL finished) {
                     [dmgLabel removeFromSuperview];
                 }];
@@ -403,11 +555,11 @@
                 [self.view addSubview:dmgLabel];
                 dmgLabel.font = [UIFont fontWithName:@"Palatino" size:20];
                 dmgLabel.textColor = [UIColor yellowColor];
-                dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y+50);
+                dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y+50);
                 dmgLabel.text = BuffDes;
                 dmgLabel.textAlignment = NSTextAlignmentCenter;
                 [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                    dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y-100);
+                    dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y-100);
                 } completion:^(BOOL finished) {
                     [dmgLabel removeFromSuperview];
                 }];
@@ -428,11 +580,11 @@
                 [self.view addSubview:dmgLabel];
                 dmgLabel.font = [UIFont fontWithName:@"Palatino" size:20];
                 dmgLabel.textColor = [UIColor yellowColor];
-                dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y+50);
+                dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y+50);
                 dmgLabel.text = BuffDes;
                 dmgLabel.textAlignment = NSTextAlignmentCenter;
                 [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                    dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y-100);
+                    dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y-100);
                     
                 } completion:^(BOOL finished) {
                     [dmgLabel removeFromSuperview];
@@ -451,11 +603,11 @@
                 [self.view addSubview:dmgLabel];
                 dmgLabel.font = [UIFont fontWithName:@"Palatino" size:20];
                 dmgLabel.textColor = [UIColor yellowColor];
-                dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y+50);
+                dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y+50);
                 dmgLabel.text = BuffDes;
                 dmgLabel.textAlignment = NSTextAlignmentCenter;
                 [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                    dmgLabel.center = CGPointMake(self.selfImageView.center.x, self.selfImageView.center.y-100);
+                    dmgLabel.center = CGPointMake(selfImageView.center.x, selfImageView.center.y-100);
                     
                 } completion:^(BOOL finished) {
                     [dmgLabel removeFromSuperview];
@@ -469,12 +621,20 @@
 
 - (void)enemyAction{
     if (!self.isBoss) {
-        NSArray * skillOrderArray = @[@0, @2, @12, @15, @20];
+        NSArray * skillOrderArray = @[@0,@0,@0, @2,@4, @12, @24, @20];
         NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"SkillList"ofType:@"plist"];
         NSArray * skillArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
         int  random = arc4random()%skillOrderArray.count;
+        NSNumber * order = skillOrderArray[random];
+        NSDictionary * skilldict = skillArray[order.integerValue];
+        [self castSkill:skilldict targetImageView:self.selfImageView];
+    }else{
+        NSInteger random = arc4random()%38;
+        
+        NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"SkillList"ofType:@"plist"];
+        NSArray * skillArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
         NSDictionary * skilldict = skillArray[random];
-#warning todo
+        [self castSkill:skilldict targetImageView:self.selfImageView];
         
     }
     

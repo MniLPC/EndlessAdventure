@@ -12,6 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CharacterSave : NSObject<NSCoding>
+@property (nonatomic,strong) NSNumber * floor;
 @property (nonatomic,strong) NSNumber * characterIndex;
 @property (nonatomic,strong) NSString * name;
 @property (nonatomic,strong) NSNumber * PoisonedTurn;
