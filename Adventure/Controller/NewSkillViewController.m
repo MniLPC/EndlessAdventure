@@ -22,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.save =  [CharacterSave newSaveWithIndex:0];
     self.newskillIcon.image = [UIImage imageNamed:[NSString stringWithFormat:@"skill%ld",self.skillIndex]];
     
     NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"SkillList"ofType:@"plist"];
@@ -106,15 +105,17 @@
 
                 break;
         default:
-                            self.save.characterSkills.skill4 = [NSNumber numberWithInteger:self.skillIndex];
+            self.save.characterSkills.skill4 = [NSNumber numberWithInteger:self.skillIndex];
             self.save.characterSkills.skillCoolDown4 = @0;
 
             break;
     }
     NSLog(@"%@",self.save);
-    
+    [self viewReturn];
 }
 - (IBAction)leaveClick:(id)sender {
+    [self viewReturn];
+
 }
 
 /*

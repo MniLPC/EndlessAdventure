@@ -124,6 +124,9 @@
                         <constraint firstAttribute="width" constant="40" id="weh-BP-Jub"/>
                     </constraints>
                     <state key="normal" backgroundImage="return"/>
+                    <connections>
+                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="dcW-lt-VZ7"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfK-1x-o6q">
                     <rect key="frame" x="213" y="338" width="62" height="19"/>

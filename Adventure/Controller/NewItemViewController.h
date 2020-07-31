@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NewItemViewController : CommonViewController
-
+@property (nonatomic,strong) CharacterSave * save;
+@property (nonatomic,strong) ItemAttributes * NewItem;
+- (void)setUpUI;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -32,12 +32,16 @@
     }
 }
 
-
-- (void)showLoading{
-
+- (void)viewReturn{
+    [UIView animateWithDuration:1.0 animations:^{
+        self.view.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self.view removeFromSuperview];
+        [self removeFromParentViewController];
+    }];
 }
-- (void)showToast:(NSString *)toast{
-}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

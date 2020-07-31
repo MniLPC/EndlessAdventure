@@ -424,9 +424,9 @@
                             NSLog(@"enemyDead");
                             
                             NSInteger random = arc4random()%100;
-                            if (random<7) {
+                            if (random<50) {
                                 [[NSNotificationCenter defaultCenter] postNotificationName:@"NewItem" object:nil];
-                            }else if (random<14){
+                            }else if (random<100){
                                 [[NSNotificationCenter defaultCenter] postNotificationName:@"NewSkill" object:nil];
                             }
                             [UIView animateWithDuration:1.0 animations:^{

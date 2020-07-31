@@ -118,7 +118,7 @@
                     attributes.Critical = @10;
                     
                     ItemAttributes * itemAtt0 = [ItemAttributes new];
-                    itemAtt0.STR = @11;
+                    itemAtt0.INT = @11;
                     itemAtt0.DEX = @9;
                     itemAtt0.Critical = @5;
                     itemAtt0.Type = @0;
@@ -126,7 +126,7 @@
                     
                     
                     ItemAttributes * itemAtt1 = [ItemAttributes new];
-                    itemAtt1.STR = @12;
+                    itemAtt1.INT = @12;
                     itemAtt1.MaxHp = @10;
                     itemAtt1.Rest = @5;
                     itemAtt1.Type = @1;
@@ -149,16 +149,16 @@
                     attributes.Critical = @10;
                     
                     ItemAttributes * itemAtt0 = [ItemAttributes new];
-                    itemAtt0.STR = @11;
-                    itemAtt0.DEX = @9;
+                    itemAtt0.PIE = @11;
+                    itemAtt0.STR = @9;
                     itemAtt0.Critical = @5;
                     itemAtt0.Type = @0;
                     itemAtt0.Image = @"Weapon_PIE1";
                     
                     
                     ItemAttributes * itemAtt1 = [ItemAttributes new];
-                    itemAtt1.STR = @12;
-                    itemAtt1.MaxHp = @10;
+                    itemAtt1.PIE = @12;
+                    itemAtt1.MaxHp = @15;
                     itemAtt1.Rest = @5;
                     itemAtt1.Type = @1;
                     itemAtt1.Image = @"Armor_PIE1";
@@ -239,15 +239,15 @@
                     attributes.Avoid = @30;
                     attributes.Critical = @20;
                     ItemAttributes * itemAtt0 = [ItemAttributes new];
-                    itemAtt0.STR = @11;
-                    itemAtt0.DEX = @9;
+                    itemAtt0.DEX = @15;
+                    itemAtt0.STR = @9;
                     itemAtt0.Critical = @5;
                     itemAtt0.Type = @0;
                     itemAtt0.Image = @"Weapon_DEX2";
                     
                     
                     ItemAttributes * itemAtt1 = [ItemAttributes new];
-                    itemAtt1.STR = @12;
+                    itemAtt1.DEX = @12;
                     itemAtt1.MaxHp = @10;
                     itemAtt1.Rest = @5;
                     itemAtt1.Type = @1;
@@ -271,14 +271,15 @@
             
             ItemAttributes * itemAtt0 = [ItemAttributes new];
             itemAtt0.STR = @11;
-            itemAtt0.DEX = @9;
+            itemAtt0.PIE = @9;
             itemAtt0.Critical = @5;
             itemAtt0.Type = @0;
             itemAtt0.Image = @"Weapon_STR1";
             
             
             ItemAttributes * itemAtt1 = [ItemAttributes new];
-            itemAtt1.STR = @12;
+            itemAtt1.STR = @10;
+            itemAtt1.PIE = @10;
             itemAtt1.MaxHp = @10;
             itemAtt1.Rest = @5;
             itemAtt1.Type = @1;

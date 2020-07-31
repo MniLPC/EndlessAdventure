@@ -10,5 +10,5 @@
 typedef void (^afterLoading)(void);
 @interface CommonViewController : UIViewController
 - (void)adjustScrollView:(UIScrollView *)scrollView;
-- (void)showToast:(NSString *)toast;
+- (void)viewReturn;
 @end

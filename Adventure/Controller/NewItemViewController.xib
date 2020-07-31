@@ -9,6 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewItemViewController">
             <connections>
+                <outlet property="NewItemDesLabel" destination="Dqc-7u-sdW" id="MYf-4C-6Vo"/>
+                <outlet property="NewItemImageView" destination="VK6-is-cDQ" id="vU0-m6-nV0"/>
+                <outlet property="selfItemDesLabel" destination="CHm-YM-c98" id="NYX-fe-m4C"/>
+                <outlet property="selfItemImageView" destination="ucr-Ye-JXc" id="O8P-gb-Rch"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -36,6 +40,9 @@
                     <state key="normal" title="Accept" backgroundImage="btn">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="acceptClick:" destination="-1" eventType="touchUpInside" id="DIM-gR-Whf"/>
+                    </connections>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUZ-8O-agX">
                     <rect key="frame" x="295" y="301" width="146" height="41"/>
@@ -49,6 +56,9 @@
                     <state key="normal" title="Leave" backgroundImage="btn">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="leaveClick:" destination="-1" eventType="touchUpInside" id="WID-9T-bAd"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="ACo-Lm-PHJ">
                     <rect key="frame" x="336" y="99.333333333333329" width="64" height="49.999999999999986"/>
