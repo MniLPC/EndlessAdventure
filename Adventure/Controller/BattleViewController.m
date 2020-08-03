@@ -32,6 +32,7 @@
 @property (nonatomic,assign) NSInteger enemyMaxHp;
 @property (weak, nonatomic) IBOutlet UILabel *enemyHpLabel;
 @property (weak, nonatomic) IBOutlet UILabel *selfHpLabel;
+@property (weak, nonatomic) IBOutlet UIButton *effectBtn;
 @end
 
 @implementation BattleViewController
@@ -48,7 +49,8 @@
     self.enemyHp = self.enemyMaxHp;
     self.enemyHpLabel.text = [NSString stringWithFormat:@"%.0ld/%.0ld",(long)self.enemyMaxHp,(long)self.enemyMaxHp];
     self.selfHpLabel.text = [NSString stringWithFormat:@"%ld/%ld",self.save.characterAttributes.HP.integerValue,self.save.characterAttributes.MaxHp.integerValue];
-    
+    [self.effectBtn setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"effectIcon%ld",self.effectIndex]] forState:UIControlStateNormal];
+
     NSString * plistPath = [[NSBundle mainBundle] pathForResource:@"ProfessionList"ofType:@"plist"];
 
          NSArray * professionArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
@@ -168,10 +170,13 @@
         
         
     }
+
+
+    
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)stateClick:(id)sender {
-    [DescriptionView ShowDescriptionWithType:0 index:0];
+    [DescriptionView ShowDescriptionWithType:0 index:self.effectIndex];
     
 }
 - (IBAction)settingClick:(id)sender {
@@ -360,6 +365,37 @@
                     avoid = 80;
                     [bufflistArray removeObject:@2];
                 }
+                switch (self.effectIndex) {
+                    case 0:
+                        {
+                            
+                        }
+                        break;
+                    case 1:
+                        {
+                            
+                        }
+                        break;
+                    case 2:
+                        {}
+                        break;
+                    case 3:
+                        {
+                            
+                        }
+                        break;
+                    case 4:
+                        {
+                                
+                        avoid = 0;
+                        }
+                            break;
+                    default:
+                    {
+                        avoid = 60;
+                    }
+                        break;
+                }
                 if (randomNum<avoid-self.save.characterAttributes.DEX.integerValue/50.0) {
                     UILabel * dmgLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
                     [self.view addSubview:dmgLabel];
@@ -386,9 +422,11 @@
                     }
                     
                   
-                    
-                    
-                    NSInteger damage = powerValue*0.3;
+                    int overpower = 1;
+                    if (self.effectIndex == 3) {
+                        overpower = 2;
+                    }
+                    NSInteger damage = powerValue*0.3*overpower;
                     if ([targetBuffListArray containsObject:@1]) {
                        damage= damage*0.5;
                         [targetBuffListArray removeObject:@1];

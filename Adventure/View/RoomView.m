@@ -51,28 +51,35 @@
         default:
             break;
     }
+  
     switch (envirIndex) {
-        case 0:
+            case 0:
+                {
+                    self.EnvironmentName.text = @"Normal";
+                    self.EnvironmentImageView.image = [UIImage imageNamed:@"effectIcon0"];
+                }
+                break;
+        case 1:
             {
                 self.EnvironmentName.text = @"Bless";
                 self.EnvironmentImageView.image = [UIImage imageNamed:@"effectIcon1"];
             }
             break;
-        case 1:
+        case 2:
         {
                 self.EnvironmentName.text = @"Burn";
             self.EnvironmentImageView.image = [UIImage imageNamed:@"effectIcon2"];
 
         }
             break;
-        case 2:
+        case 3:
         {
-             self.EnvironmentName.text = @"Strengthen";
+             self.EnvironmentName.text = @"Overpower";
             self.EnvironmentImageView.image = [UIImage imageNamed:@"effectIcon3"];
 
         }
             break;
-        case 3:
+        case 4:
         {
                          self.EnvironmentName.text = @"Narrow";
             self.EnvironmentImageView.image = [UIImage imageNamed:@"effectIcon4"];
@@ -82,7 +89,7 @@
        
         default:
             {
-                       self.EnvironmentName.text = @"Sandstorm";
+                self.EnvironmentName.text = @"Sandstorm";
                 self.EnvironmentImageView.image = [UIImage imageNamed:@"effectIcon5"];
 
                    }

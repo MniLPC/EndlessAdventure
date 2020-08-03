@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BattleViewController : CommonViewController
 @property (nonatomic,strong) CharacterSave * save;
 @property (nonatomic,assign) BOOL isBoss;
+@property (nonatomic,assign) NSInteger effectIndex;
 @end
 
 NS_ASSUME_NONNULL_END

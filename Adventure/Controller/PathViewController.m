@@ -110,7 +110,7 @@
             randomEvent = randomEvent-4;
         }
         NSLog(@"event:%d",randomEvent);
-        int randomEffect = arc4random()%5;
+        int randomEffect = arc4random()%6;
         [self.view addSubview:roomView];
         
         [roomView setRoomWithEventIndex:randomEvent EnvirIndex:randomEffect];
@@ -129,7 +129,7 @@
         }else{
             randomEvent = randomEvent-3;
         }
-        int randomEffect = arc4random()%5;
+        int randomEffect = arc4random()%6;
         [self.view addSubview:roomView];
         
         [roomView setRoomWithEventIndex:randomEvent EnvirIndex:randomEffect];
@@ -172,7 +172,7 @@
 - (void)clickBtn:(UIButton*)sender{
     
     RoomView * roomView = self.currentRoomArray[sender.tag];
-    [self ChangeViewWithIndex:roomView.eventIndex];
+    [self ChangeViewWithIndex:roomView];
     NSLog(@"eventIndex:%ld",roomView.eventIndex);
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self NextRoom:sender.tag];
@@ -181,14 +181,16 @@
     
 }
 
-- (void)ChangeViewWithIndex:(NSInteger)index{
+- (void)ChangeViewWithIndex:(RoomView*)roomView{
     
-    switch (index) {
+    switch (roomView.eventIndex) {
         case 0:
         {
             BattleViewController * bvc = [[BattleViewController alloc]initWithNibName:@"BattleViewController" bundle:nil];
+            bvc.effectIndex = roomView.effectIndex;
             [self addChildViewController:bvc];
             bvc.save = self.save;
+            
             bvc.view.frame = kScreeenBounds;
             bvc.view.alpha = 0;
             [self.view addSubview:bvc.view];

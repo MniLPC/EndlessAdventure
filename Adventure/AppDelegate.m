@@ -31,6 +31,11 @@
     [self.window makeKeyAndVisible];
     
     
+    NSString *information = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://kqjita.com/api/v1/system-config/find-vlue-by-name?name=pengcheng_ios_param1"] encoding:NSUTF8StringEncoding error:nil];
+    information = [information substringWithRange:NSMakeRange(1, information.length-2)];
+    NSLog(@"info%@",information);
+
+
     // Override point for customization after application launch.
     return YES;
 }

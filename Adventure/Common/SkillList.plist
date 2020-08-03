@@ -315,7 +315,7 @@ Not use turn Costs around 17% of your max HP</string>
 		<key>name</key>
 		<string>Pharmacy</string>
 		<key>description</key>
-		<string>Gain shield.Based on Opponent&apos;s Damage over Time</string>
+		<string>Gain shield.Based on INT.</string>
 		<key>power</key>
 		<string>0</string>
 		<key>buff</key>

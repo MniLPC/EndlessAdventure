@@ -23,11 +23,21 @@
         NSString * cdSTR = professionDict[@"cooldown"];
         desView.descriptionLabel.text =  [desView.descriptionLabel.text stringByAppendingFormat:@"\nCoolDown:%@",cdSTR];
         
+    }else if(type == 0){
+        NSArray * names =  @[@"Normal",@"Bless",@"Burn",@"Overpower",@"Narrow",@"Sandstorm"];
+        NSArray * desArray = @[@"An ordinary room.",@"Everyone heal HP after ending turn.",@"Everyone lose HP after ending turn.",@"All damage will be doubled.",@"No miss and avoid.(Everyone)",@"Low Accuracy.(Everyone) You can run away more earlier."];
+        desView.nameLabel.text = names[index];
+        desView.descriptionLabel.text = desArray[index];        
     }
-    desView.frame = CGRectMake(0, 0, 414, 217);
+    desView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
     desView.center = kKeyWindow.center;
     [kKeyWindow addSubview:desView];
     
+    
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [self removeFromSuperview];
     
 }
 - (IBAction)closeClick:(id)sender {
