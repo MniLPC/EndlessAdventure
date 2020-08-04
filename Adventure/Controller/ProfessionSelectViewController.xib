@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -9,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfessionSelectViewController">
             <connections>
+                <outlet property="SoulShardLabel" destination="U0p-VE-IAC" id="aqA-p5-wvf"/>
                 <outlet property="characterDescriptionTextView" destination="PMR-66-8Zq" id="Rs3-iY-Nak"/>
                 <outlet property="characterImageView" destination="3ft-sk-U3C" id="3pt-Fc-zUI"/>
                 <outlet property="confirmBtn" destination="yU7-hk-MLb" id="TbR-oi-z58"/>
@@ -87,15 +89,18 @@
                         </button>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yU7-hk-MLb">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yU7-hk-MLb">
                     <rect key="frame" x="437" y="258" width="200" height="57"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="57" id="sRX-PZ-p42"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="14"/>
-                    <state key="normal" title="-2000 Soul Shard unlock" backgroundImage="btn">
-                        <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
+                    <state key="normal" title="Start Adventure" backgroundImage="btn">
+                        <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="confirmClick:" destination="-1" eventType="touchUpInside" id="0fB-qF-jZy"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0p-VE-IAC">
                     <rect key="frame" x="602" y="10" width="45" height="17"/>
@@ -120,6 +125,9 @@
                         <constraint firstAttribute="width" constant="40" id="MDW-NM-i9n"/>
                     </constraints>
                     <state key="normal" backgroundImage="return"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="g1n-fu-gjP"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -149,7 +157,7 @@
     </objects>
     <resources>
         <image name="SoulShard" width="256" height="256"/>
-        <image name="btn" width="186" height="92"/>
+        <image name="btn" width="146" height="41"/>
         <image name="return" width="94" height="55"/>
     </resources>
 </document>

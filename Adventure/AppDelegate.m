@@ -23,7 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
-    PathViewController * bvc = [[PathViewController alloc]initWithNibName:@"PathViewController" bundle:nil];
+    MainTitleViewController * bvc = [[MainTitleViewController alloc]initWithNibName:@"MainTitleViewController" bundle:nil];
     CommonNavigationController * navi = [[CommonNavigationController alloc]initWithRootViewController:bvc];
 
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

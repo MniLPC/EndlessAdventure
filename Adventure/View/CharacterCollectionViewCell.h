@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CharacterCollectionViewCell : UICollectionViewCell
-
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *charactorImageVIew;
+- (void)setCellWithSave:(CharacterSave*)save;
 @end
 
 NS_ASSUME_NONNULL_END

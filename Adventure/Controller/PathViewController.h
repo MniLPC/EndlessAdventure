@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PathViewController : CommonViewController
-
+@property (nonatomic,strong) CharacterSave * save;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -64,7 +64,7 @@
 		<key>base</key>
 		<string>DEX</string>
 		<key>cooldown</key>
-		<string>5</string>
+		<string>0</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -80,7 +80,7 @@
 		<key>base</key>
 		<string>0</string>
 		<key>cooldown</key>
-		<string>1</string>
+		<string>2</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -97,6 +97,8 @@
 		<string>0</string>
 		<key>cooldown</key>
 		<string>2</string>
+		<key>Instant</key>
+		<string>1</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -112,7 +114,7 @@
 		<key>base</key>
 		<string>INT</string>
 		<key>cooldown</key>
-		<string>1</string>
+		<string>2</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -180,11 +182,11 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Instant heal</string>
+		<string>Holy Healing.</string>
 		<key>description</key>
-		<string>Heal yourself without wasting your turn.</string>
+		<string>Heal yourself to MaxHp</string>
 		<key>power</key>
-		<string>0</string>
+		<string>100</string>
 		<key>buff</key>
 		<integer>6</integer>
 		<key>debuff</key>
@@ -192,7 +194,7 @@
 		<key>base</key>
 		<string>STR</string>
 		<key>cooldown</key>
-		<string>3</string>
+		<string>5</string>
 		<key>Instant</key>
 		<string>1</string>
 	</dict>
@@ -559,7 +561,7 @@ Not use turn Costs around 17% of your max HP</string>
 		<key>name</key>
 		<string>Death word	</string>
 		<key>description</key>
-		<string>Kill an enemy. Low accuracy.</string>
+		<string>Kill an enemy.</string>
 		<key>power</key>
 		<string>99999</string>
 		<key>buff</key>
@@ -569,7 +571,7 @@ Not use turn Costs around 17% of your max HP</string>
 		<key>base</key>
 		<string>STR</string>
 		<key>cooldown</key>
-		<string>0</string>
+		<string>10</string>
 	</dict>
 	<dict>
 		<key>name</key>

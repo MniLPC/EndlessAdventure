@@ -22,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *heroImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *hpLabel;
-@property (nonatomic,strong) CharacterSave * save;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *hpWidthConstraint;
 @property (weak, nonatomic) IBOutlet UILabel *LevelLabel;
 
@@ -32,9 +32,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSInteger random = arc4random()%8 ;
-    self.save = [CharacterSave newSaveWithIndex:random];
-    self.heroImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"character_%ld",random]];
+
+    self.heroImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"character_%@",self.save.characterIndex]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:@"actionDone" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(NewItem:) name:@"NewItem" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(NewSkill) name:@"NewSkill" object:nil];
@@ -244,16 +243,7 @@
 }
 - (IBAction)backClick:(id)sender {
     
-    NewItemViewController * bvc = [[NewItemViewController alloc]initWithNibName:@"NewItemViewController" bundle:nil];
-    [self addChildViewController:bvc];
-    bvc.save = self.save;
-    bvc.view.frame = kScreeenBounds;
-    bvc.view.alpha = 0;
-    [self.view addSubview:bvc.view];
-    [bvc didMoveToParentViewController:self];
-    [UIView animateWithDuration:1.0 animations:^{
-        bvc.view.alpha = 1;
-    }];
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 /*

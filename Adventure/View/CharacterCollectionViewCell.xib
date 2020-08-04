@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New" translatesAutoresizingMaskIntoConstraints="NO" id="Dhs-bJ-ieJ">
-                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New" translatesAutoresizingMaskIntoConstraints="NO" id="Dhs-bJ-ieJ">
+                        <rect key="frame" x="0.0" y="20" width="160" height="140"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mG6-er-TtA">
                         <rect key="frame" x="0.0" y="160" width="160" height="40"/>
@@ -37,18 +38,22 @@
             <constraints>
                 <constraint firstItem="mG6-er-TtA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="H6o-pf-rb0"/>
                 <constraint firstAttribute="bottom" secondItem="mG6-er-TtA" secondAttribute="bottom" id="PNN-CN-JR7"/>
-                <constraint firstItem="Dhs-bJ-ieJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QX0-Bm-l81"/>
+                <constraint firstItem="Dhs-bJ-ieJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="QX0-Bm-l81"/>
                 <constraint firstAttribute="trailing" secondItem="Dhs-bJ-ieJ" secondAttribute="trailing" id="ZNG-Oi-Ug3"/>
                 <constraint firstItem="mG6-er-TtA" firstAttribute="top" secondItem="Dhs-bJ-ieJ" secondAttribute="bottom" id="gqw-z0-oOG"/>
                 <constraint firstItem="Dhs-bJ-ieJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kqZ-Ui-HjS"/>
                 <constraint firstAttribute="trailing" secondItem="mG6-er-TtA" secondAttribute="trailing" id="vtF-rs-kKS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <connections>
+                <outlet property="charactorImageVIew" destination="Dhs-bJ-ieJ" id="iME-Le-0Wz"/>
+                <outlet property="nameLabel" destination="mG6-er-TtA" id="A4p-Jk-Q4t"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="136.60714285714286"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="New" width="73" height="73"/>
+        <image name="New" width="70" height="71"/>
         <image name="characterFrame" width="85" height="85"/>
     </resources>
 </document>

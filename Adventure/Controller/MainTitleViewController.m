@@ -9,9 +9,11 @@
 #import "MainTitleViewController.h"
 #import "CharacterCollectionViewCell.h"
 #import "ProfessionSelectViewController.h"
+#import "PathViewController.h"
 @interface MainTitleViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic,strong) NSMutableArray * dataSource;
+@property (weak, nonatomic) IBOutlet UILabel *SoulShardLabel;
 @end
 
 @implementation MainTitleViewController
@@ -19,7 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView registerNib:[UINib nibWithNibName:@"CharacterCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
-    NSArray * saveArray = [kUserDefaults objectForKey:@"save"];
+    
+    NSArray * saveArray = [UserDefaults unArchiveArrayForKey:@"save"] ;
+
+    NSNumber * SoulShard = [kUserDefaults objectForKey:@"SoulShard"];
+    if (!SoulShard) {
+        SoulShard = @0;
+    }
+    self.SoulShardLabel.text = [NSString stringWithFormat:@"%@",SoulShard];
     self.dataSource = [NSMutableArray arrayWithArray:saveArray];
     // Do any additional setup after loading the view from its nib.
 }
@@ -35,7 +44,9 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     CharacterCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-        
+    if (indexPath.row<self.dataSource.count) {
+        [cell setCellWithSave:self.dataSource[indexPath.row]];
+    }
     
     return cell;
     
@@ -46,6 +57,11 @@
     if (indexPath.row == self.dataSource.count) {
         ProfessionSelectViewController * psvc = [[ProfessionSelectViewController alloc]initWithNibName:@"ProfessionSelectViewController" bundle:nil];
         [self.navigationController pushViewController:psvc animated:YES];
+    }else{
+        
+        PathViewController * pathVC = [[PathViewController alloc]initWithNibName:@"PathViewController" bundle:nil];
+        pathVC.save = self.dataSource[indexPath.row];
+        [self.navigationController pushViewController:pathVC animated:YES];
     }
 }
 /*
