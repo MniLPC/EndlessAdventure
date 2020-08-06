@@ -20,7 +20,7 @@
             NSArray * professionArray = [[NSArray alloc] initWithContentsOfFile:plistPath];
       NSDictionary * professionDict = professionArray[save.characterIndex.integerValue];
     NSString * nameSTR = professionDict[@"name"];
-    self.nameLabel.text = [nameSTR stringByAppendingFormat:@" Lv%@",save.characterAttributes.Level];
+    self.nameLabel.text = [nameSTR stringByAppendingFormat:@" Lv%@ %@F",save.characterAttributes.Level,save.floor];
     self.charactorImageVIew.image = [UIImage imageNamed:[NSString stringWithFormat:@"character_%@",save.characterIndex]];
 }
 @end

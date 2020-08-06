@@ -442,12 +442,13 @@
         default:
             break;
     }
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"refresh" object:nil];
     [self viewReturn];
     
     
 }
 - (IBAction)leaveClick:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"refresh" object:nil];
     [self viewReturn];
     
 }

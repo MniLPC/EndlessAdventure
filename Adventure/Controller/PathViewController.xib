@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,6 +14,7 @@
                 <outlet property="heroImageView" destination="ADL-L2-WKg" id="99E-ZB-fpr"/>
                 <outlet property="hpLabel" destination="hfK-1x-o6q" id="cfQ-zy-z5C"/>
                 <outlet property="hpWidthConstraint" destination="ecG-yy-aky" id="5DY-kH-eCc"/>
+                <outlet property="hpbar" destination="ND1-Zx-Y9k" id="iCv-nj-JGH"/>
                 <outlet property="nameLabel" destination="6Bb-a7-F44" id="qDm-6K-dJY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="currentSelectionView" destination="UNC-dO-QWx" id="VBz-uN-k4J"/>
@@ -43,7 +45,7 @@
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HpBar" translatesAutoresizingMaskIntoConstraints="NO" id="ND1-Zx-Y9k">
-                    <rect key="frame" x="140" y="340" width="200" height="15"/>
+                    <rect key="frame" x="139" y="340" width="200" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="5vv-4N-POu"/>
                         <constraint firstAttribute="width" constant="200" id="ecG-yy-aky"/>
@@ -142,6 +144,7 @@
                 <constraint firstItem="FKJ-Sp-V7W" firstAttribute="centerX" secondItem="UNC-dO-QWx" secondAttribute="centerX" id="AYa-cP-98m"/>
                 <constraint firstItem="nd0-X8-Pjc" firstAttribute="leading" secondItem="MM1-hV-NIY" secondAttribute="trailing" constant="-52" id="HNW-Ax-xOY"/>
                 <constraint firstItem="ADL-L2-WKg" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="KYh-PC-IPd"/>
+                <constraint firstItem="nd0-X8-Pjc" firstAttribute="leading" secondItem="ND1-Zx-Y9k" secondAttribute="leading" constant="-15" id="KgW-Zw-pgd"/>
                 <constraint firstItem="ND1-Zx-Y9k" firstAttribute="top" secondItem="nd0-X8-Pjc" secondAttribute="bottom" constant="-28" id="O8b-3R-P8P"/>
                 <constraint firstItem="zU0-5L-vkz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.6" id="QZ1-fX-OyX"/>
                 <constraint firstItem="nd0-X8-Pjc" firstAttribute="top" secondItem="6Bb-a7-F44" secondAttribute="bottom" constant="-33" id="R4W-wy-x71"/>
@@ -152,7 +155,6 @@
                 <constraint firstItem="hfK-1x-o6q" firstAttribute="top" secondItem="nd0-X8-Pjc" secondAttribute="bottom" constant="-30" id="b5t-VV-nn8"/>
                 <constraint firstItem="qOU-1M-MPy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.4" id="cYN-Od-awo"/>
                 <constraint firstItem="FKJ-Sp-V7W" firstAttribute="top" secondItem="UNC-dO-QWx" secondAttribute="bottom" id="eAz-hX-CV2"/>
-                <constraint firstItem="nd0-X8-Pjc" firstAttribute="leading" secondItem="ND1-Zx-Y9k" secondAttribute="trailing" constant="-216" id="eHr-OC-m5c"/>
                 <constraint firstItem="nd0-X8-Pjc" firstAttribute="top" secondItem="MM1-hV-NIY" secondAttribute="bottom" constant="-33" id="gGZ-Eu-ofr"/>
                 <constraint firstItem="UNC-dO-QWx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.15" id="hlC-e9-G20"/>
                 <constraint firstItem="vA5-WV-2Sn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.2" id="k5F-sg-Ppf"/>

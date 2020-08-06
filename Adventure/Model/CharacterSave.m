@@ -7,6 +7,7 @@
 //
 
 #import "CharacterSave.h"
+#import "AttributeCalculationTool.h"
 
 @implementation CharacterSave
 - (instancetype)initWithCoder:(NSCoder *)coder{
@@ -16,6 +17,7 @@
         self.characterItems = [coder decodeObjectForKey:@"characterItems"];
         self.characterSkills = [coder decodeObjectForKey:@"characterSkills"];
         self.characterIndex = [coder decodeObjectForKey:@"characterIndex"];
+        self.calCharacterAttributes = [coder decodeObjectForKey:@"calCharacterAttributes"];
         self.floor = [coder decodeObjectForKey:@"floor"];
     }
     return self;
@@ -27,7 +29,7 @@
     [coder encodeObject:_characterSkills forKey:@"characterSkills"];
     [coder encodeObject:_characterIndex forKey:@"characterIndex"];
     [coder encodeObject:_floor forKey:@"floor"];
-
+    [coder encodeObject:_calCharacterAttributes forKey:@"calCharacterAttributes"];
 }
 
 + (CharacterSave*)newSaveWithIndex:(NSInteger)index{
@@ -299,7 +301,7 @@
     save.characterItems = items;
     save.characterSkills = skills;
     save.characterIndex = [NSNumber numberWithInteger:index];
-    
+    save.calCharacterAttributes = [[AttributeCalculationTool shareInstance] getCharacterAttributes:save];
     
     
     
@@ -309,5 +311,17 @@
     
     
 }
-
+- (void)levelUp{
+    
+    self.characterAttributes.STR = @(self.characterAttributes.STR.integerValue*1.2);
+    self.characterAttributes.DEX = @(self.characterAttributes.DEX.integerValue*1.2);
+    self.characterAttributes.INT = @(self.characterAttributes.INT.integerValue*1.2);
+    self.characterAttributes.PIE = @(self.characterAttributes.PIE.integerValue*1.2);
+    self.characterAttributes.MaxHp = @(self.characterAttributes.MaxHp.integerValue*1.2);
+    self.characterAttributes.HP = self.characterAttributes.MaxHp;
+    self.characterAttributes.Experience = @0;
+    self.characterAttributes.Level = @(self.characterAttributes.Level.integerValue+1);
+    self.calCharacterAttributes = [[AttributeCalculationTool shareInstance] getCharacterAttributes:self];
+    
+}
 @end

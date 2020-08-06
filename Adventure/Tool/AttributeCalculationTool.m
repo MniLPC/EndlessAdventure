@@ -44,6 +44,10 @@ static AttributeCalculationTool *_instance = nil;
     MaxHp = baseAttributes.MaxHp.integerValue + items.Weapon.MaxHp.integerValue+items.Armor.MaxHp.integerValue+items.Jewelry.MaxHp.integerValue;
     calculatedAttributes.MaxHp = [NSNumber numberWithInteger:MaxHp];
     
+    NSInteger Hp = baseAttributes.HP.integerValue;
+    Hp = baseAttributes.MaxHp.integerValue + items.Weapon.MaxHp.integerValue+items.Armor.MaxHp.integerValue+items.Jewelry.MaxHp.integerValue;
+    calculatedAttributes.HP = [NSNumber numberWithInteger:Hp];
+    
     NSInteger Shield = baseAttributes.Shield.integerValue;
     Shield = baseAttributes.Shield.integerValue + items.Weapon.Shield.integerValue+items.Armor.Shield.integerValue+items.Jewelry.Shield.integerValue;
     calculatedAttributes.Shield = [NSNumber numberWithInteger:Shield];

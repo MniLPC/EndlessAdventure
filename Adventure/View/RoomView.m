@@ -48,6 +48,12 @@
                    self.eventImageView.image = [UIImage imageNamed:@"eventIcon4"];
                }
                    break;
+        case 4:
+        {
+            self.eventName.text = @"Boss";
+            self.eventImageView.image = [UIImage imageNamed:@"eventIcon5"];
+        }
+            break;
         default:
             break;
     }

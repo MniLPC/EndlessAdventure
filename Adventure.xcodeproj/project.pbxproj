@@ -30,6 +30,8 @@
 		845218EC24BEEE300016C541 /* MainTitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845218EA24BEEE300016C541 /* MainTitleViewController.xib */; };
 		845218F524BF03E20016C541 /* CharacterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845218F324BF03E20016C541 /* CharacterCollectionViewCell.m */; };
 		845218F624BF03E20016C541 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845218F424BF03E20016C541 /* CharacterCollectionViewCell.xib */; };
+		847F025224DBA5320091868E /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847F025024DBA5320091868E /* LaunchViewController.m */; };
+		847F025324DBA5320091868E /* LaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847F025124DBA5320091868E /* LaunchViewController.xib */; };
 		848E2CF224C979DF00933E16 /* ToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848E2CF124C979DF00933E16 /* ToastView.m */; };
 		848E2CF424C979EA00933E16 /* ToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848E2CF324C979EA00933E16 /* ToastView.xib */; };
 		8491113324B309A700E118B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491113224B309A700E118B5 /* AppDelegate.m */; };
@@ -95,6 +97,9 @@
 		845218F224BF03E20016C541 /* CharacterCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterCollectionViewCell.h; sourceTree = "<group>"; };
 		845218F324BF03E20016C541 /* CharacterCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterCollectionViewCell.m; sourceTree = "<group>"; };
 		845218F424BF03E20016C541 /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
+		847F024F24DBA5320091868E /* LaunchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		847F025024DBA5320091868E /* LaunchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		847F025124DBA5320091868E /* LaunchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchViewController.xib; sourceTree = "<group>"; };
 		848E2CF024C979DF00933E16 /* ToastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToastView.h; sourceTree = "<group>"; };
 		848E2CF124C979DF00933E16 /* ToastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastView.m; sourceTree = "<group>"; };
 		848E2CF324C979EA00933E16 /* ToastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastView.xib; sourceTree = "<group>"; };
@@ -216,6 +221,9 @@
 				84FFCE2A24B6C4960084AB5C /* BattleViewController.h */,
 				84FFCE2B24B6C4960084AB5C /* BattleViewController.m */,
 				84FFCE2C24B6C4960084AB5C /* BattleViewController.xib */,
+				847F024F24DBA5320091868E /* LaunchViewController.h */,
+				847F025024DBA5320091868E /* LaunchViewController.m */,
+				847F025124DBA5320091868E /* LaunchViewController.xib */,
 				84BE956D24C6D8C90046811A /* TreasureViewController.h */,
 				84BE956E24C6D8C90046811A /* TreasureViewController.m */,
 				84BE956F24C6D8C90046811A /* TreasureViewController.xib */,
@@ -353,6 +361,7 @@
 				84FFCE2E24B6C4960084AB5C /* BattleViewController.xib in Resources */,
 				8444D5C424C03D21000D3B24 /* RoomView.xib in Resources */,
 				848E2CF424C979EA00933E16 /* ToastView.xib in Resources */,
+				847F025324DBA5320091868E /* LaunchViewController.xib in Resources */,
 				8427564924B871B300C9782B /* EffectList.plist in Resources */,
 				8491114124B309A900E118B5 /* LaunchScreen.storyboard in Resources */,
 				84BE957B24C6F23E0046811A /* NewSkillViewController.xib in Resources */,
@@ -386,6 +395,7 @@
 				84CDC23224B59B390092F377 /* CharacterSave.m in Sources */,
 				8404BCC524B4727200C99FB6 /* UserDefaults.m in Sources */,
 				84FFCE2D24B6C4960084AB5C /* BattleViewController.m in Sources */,
+				847F025224DBA5320091868E /* LaunchViewController.m in Sources */,
 				8447B69C24C8378800352B70 /* EventViewController.m in Sources */,
 				848E2CF224C979DF00933E16 /* ToastView.m in Sources */,
 				8444D5BE24C039AD000D3B24 /* PathViewController.m in Sources */,

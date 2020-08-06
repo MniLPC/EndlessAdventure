@@ -78,7 +78,7 @@ static inline CGFloat SafeAreaTopHeight(void){
 /// @name 字体、颜色相关
 ///=============================================================================
 #define MonsterNamesArray         @[@"Killer wasp",@"Pumpkin head",@"Imp",@"War ghost",@"Undead hound",@"Cursed book",@"Goblin Raider",@"Goblin Lord",@"Hungry wolf",@"Wild boar",@"Mad bear",@"Ghoul",@"Harpy",@"Frankenstein",@"Dryad",@"Troll",@"vampire",@"Djinn",@"Evil dwarf",@"Monocular giant",@"Coyotes",@"Young dragon",@"Ghost rider",@"Devil boy",@"Atum",@"Scorpion Queen",@"Night Demon",@"Flash moth",@"Minotaur",@"Horror",@"Lich",@"Black widow",@"Parasite",@"Killer crab",@"Death claw",@"Khazra"]
-
+#define BossNamesArray @[@"Demon Lord",@"Kirin",@"Headless Knight",@"Ancient creations",@"Synthetic Beast",@"Phoenix",@"Hydra",@"Destroyer"]
 #define FONT_SIZE(f)            [UIFont systemFontOfSize:(f)]
 #define FONT_BOLD_SIZE(f)       [UIFont boldSystemFontOfSize:(f)]
 #define FONT_ITALIC_SIZE(f)     [UIFont italicSystemFontOfSize:(f)]

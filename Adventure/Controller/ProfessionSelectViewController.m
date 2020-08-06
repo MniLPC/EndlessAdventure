@@ -70,8 +70,9 @@
         [newSaveArray addObject:save];
         [UserDefaults setArchivedArray:newSaveArray forKey:@"save"];
         PathViewController * pvc = [[PathViewController alloc]initWithNibName:@"PathViewController" bundle:nil];
+        pvc.saveIndex = newSaveArray.count-1;
         pvc.save = save;
-        [self.navigationController pushViewController:pvc animated:YES];
+        [self.navigationController pushViewController:pvc animated:NO];
         
         
         

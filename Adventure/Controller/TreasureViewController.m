@@ -8,6 +8,7 @@
 
 #import "TreasureViewController.h"
 #import "NewItemViewController.h"
+#import "ToastView.h"
 @interface TreasureViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *treasureImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *itemImageView;
@@ -30,19 +31,43 @@
     
     self.itemImageView.hidden = NO;
     self.lightImageView.hidden = NO;
-    NewItemViewController * itemVC = [NewItemViewController new];
-    [itemVC setUpUI];
-    self.itemImageView.image = [UIImage imageNamed:itemVC.NewItem.Image];
-    [UIView animateWithDuration:1.5 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        self.itemImageView.transform = CGAffineTransformMakeScale(4, 4);
-        self.lightImageView.transform = CGAffineTransformRotate(self.lightImageView.transform, M_PI_4);
-    } completion:^(BOOL finished) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self viewReturn];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"NewItem" object:nil userInfo:@{@"item":itemVC}];
-        });
+    
+    NSInteger random = arc4random()%3;
+    
+    if (!random) {
+            NewItemViewController * itemVC = [NewItemViewController new];
+        [itemVC setUpUI];
+        self.itemImageView.image = [UIImage imageNamed:itemVC.NewItem.Image];
+        [UIView animateWithDuration:1.5 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+            self.itemImageView.transform = CGAffineTransformMakeScale(4, 4);
+            self.lightImageView.transform = CGAffineTransformRotate(self.lightImageView.transform, M_PI_4);
+        } completion:^(BOOL finished) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self viewReturn];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"NewItem" object:nil userInfo:@{@"item":itemVC}];
+            });
 
-    }];
+        }];
+    }else{
+        
+        self.itemImageView.image = [UIImage imageNamed:@"SoulShard"];
+             [UIView animateWithDuration:1.5 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                 self.itemImageView.transform = CGAffineTransformMakeScale(4, 4);
+                 self.lightImageView.transform = CGAffineTransformRotate(self.lightImageView.transform, M_PI_4);
+             } completion:^(BOOL finished) {
+                 [ToastView showToastWithText:@"You get 50 pieces of SoulShard."];
+
+                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                 });
+                 [[NSNotificationCenter defaultCenter] postNotificationName:@"refresh" object:nil];
+
+                 [self viewReturn];
+
+             }];
+        
+    }
+    
+
 
 
     

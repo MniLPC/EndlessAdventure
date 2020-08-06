@@ -17,8 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSString * name;
 @property (nonatomic,strong) NSNumber * PoisonedTurn;
 @property (nonatomic,strong) CharacterAttributes * characterAttributes;
+@property (nonatomic,strong) CharacterAttributes * calCharacterAttributes;
 @property (nonatomic,strong) CharacterItems * characterItems;
 @property (nonatomic,strong) CharacterSkills * characterSkills;
+- (void)levelUp;
 + (CharacterSave*)newSaveWithIndex:(NSInteger)index;
 @end
 

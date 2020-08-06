@@ -61,7 +61,8 @@
         
         PathViewController * pathVC = [[PathViewController alloc]initWithNibName:@"PathViewController" bundle:nil];
         pathVC.save = self.dataSource[indexPath.row];
-        [self.navigationController pushViewController:pathVC animated:YES];
+        pathVC.saveIndex = indexPath.row;
+        [self.navigationController pushViewController:pathVC animated:nil];
     }
 }
 /*
